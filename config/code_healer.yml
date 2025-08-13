@@ -61,7 +61,7 @@ git:
   auto_push: true
   branch_prefix: "evolve"
   commit_message_template: 'Fix {{class_name}}##{{method_name}}: {{error_type}}'
-  pr_target_branch: "main"
+  pr_target_branch: "master"
 
 # Pull Request Configuration
 pull_request:

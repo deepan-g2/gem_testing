@@ -5,27 +5,23 @@ class OrderProcessor
 
   def calculate_total(items)
       # Input validation
-      if items.nil? || !items.is_a?(Array)
-        Rails.logger.warn("Invalid input: items must be an array")
-        return 0 # Assuming 0 is a safe default value for total
-      end
+      return 0 if items.nil? || !items.is_a?(Array)
   
       # Business logic with error handling
       begin
-        total = items.reduce(0) do |sum, item|
-          raise TypeError, 'Item price must be an integer' unless item[:price].is_a?(Integer)
-          sum + item[:price]
-        end
+        total = items.reduce(:+)
         Rails.logger.info("Total calculation successful: #{total}")
         total
       rescue TypeError => e
-        Rails.logger.error("TypeError occurred: #{e.message}")
+        Rails.logger.error("TypeError occurred during total calculation: #{e.message}")
         # Apply business rules from context for appropriate return value
-        return 0 # Assuming 0 is a safe default value for total in case of errors
+        # Assuming that the business rule specifies to return 0 in case of a TypeError
+        return 0
       rescue => e
-        Rails.logger.error("Unexpected error in operation: #{e.message}")
+        Rails.logger.error("Unexpected error during total calculation: #{e.message}")
         # Apply business rules from context for appropriate return value
-        return 0 # Assuming 0 is a safe default value for total in case of errors
+        # Assuming that the business rule specifies to return 0 in case of an unexpected error
+        return 0
       end
     end
 
