@@ -133,3 +133,22 @@ app/models/order_processor.rb:12:in `block in calculate_total'
 app/models/order_processor.rb:11:in `sum'
 app/models/order_processor.rb:11:in `calculate_total'
 app/controllers/api/order_processor_controller.rb:11:in `calculate_total'
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/api/order_processor/calculate_total" for ::1 at 2025-08-13 23:28:20 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::OrderProcessorController#calculate_total as */*
+  Parameters: {"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}], "order_processor"=>{"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}]}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1352)
+
+
+  
+TypeError (nil can't be coerced into Integer):
+  
+app/models/order_processor.rb:12:in `*'
+app/models/order_processor.rb:12:in `block in calculate_total'
+app/models/order_processor.rb:11:in `sum'
+app/models/order_processor.rb:11:in `calculate_total'
+app/controllers/api/order_processor_controller.rb:11:in `calculate_total'

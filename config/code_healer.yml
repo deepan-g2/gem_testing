@@ -32,7 +32,7 @@ evolution_strategy:
 
 # Claude Code Terminal Configuration
 claude_code:
-  enabled: false
+  enabled: true
   timeout: 300  # Timeout in seconds
   max_file_changes: 10
   include_tests: true
