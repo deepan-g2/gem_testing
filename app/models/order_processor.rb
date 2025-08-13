@@ -9,12 +9,17 @@ class OrderProcessor
     items.sum do |item|
       next 0 if item.nil?
       
-      price = item[:price].to_f
-      quantity = item[:quantity].to_i
+      price = item[:price]
+      quantity = item[:quantity]
       
-      next 0 if price <= 0 || quantity <= 0
+      next 0 if price.nil? || quantity.nil?
       
-      price * quantity
+      price_num = price.to_f
+      quantity_num = quantity.to_f
+      
+      next 0 if price_num <= 0 || quantity_num <= 0
+      
+      price_num * quantity_num
     end
   end
 
