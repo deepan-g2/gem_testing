@@ -4,24 +4,24 @@ class OrderProcessor
   end
 
   def calculate_total(items)
-      # Input validation
-      return 0 if items.nil? || !items.is_a?(Array)
-  
-      # Business logic with error handling
-      begin
-        total = items.reduce(0) { |sum, item| sum + item.price }
-        Rails.logger.info("Total calculation successful: #{total}")
-        total
-      rescue TypeError => e
-        Rails.logger.warn("TypeError occurred in calculate_total: #{e.message}")
-        # Apply business rules from context for appropriate return value
-        return 0
-      rescue => e
-        Rails.logger.error("Unexpected error in calculate_total: #{e.message}")
-        # Apply business rules from context for appropriate return value
-        return 0
-      end
+    return 0 if items.nil? || items.empty?
+
+    items.sum do |item|
+      next 0 if item.nil?
+      
+      price = item[:price]
+      quantity = item[:quantity]
+      
+      # Convert strings to numbers, handle invalid conversions
+      price = price.to_f if price.is_a?(String)
+      quantity = quantity.to_i if quantity.is_a?(String)
+      
+      # Skip items with nil, zero, or negative values
+      next 0 if price.nil? || quantity.nil? || price <= 0 || quantity <= 0
+      
+      price * quantity
     end
+  end
 
   def apply_discount(total, discount_percentage)
     return total if total.nil? || discount_percentage.nil?
