@@ -1,0 +1,37 @@
+# CodeHealer Configuration
+enabled: true
+
+# Allowed classes for healing
+allowed_classes:
+  - User
+  - Order
+  - PaymentProcessor
+
+# Evolution strategy
+evolution_strategy:
+  method: api  # Options: api, claude_code_terminal, hybrid
+  fallback_to_api: true
+
+# OpenAI API configuration
+api:
+  provider: openai
+  model: gpt-4
+  max_tokens: 2000
+  temperature: 0.1
+
+# Git operations
+git:
+  auto_commit: true
+  auto_push: true
+  branch_prefix: "heal"
+
+# Business context
+business_context:
+  enabled: true
+  sources:
+    - "docs/business_rules.md"
+
+# Claude Code Terminal (optional)
+claude_code:
+  enabled: false
+  command_template: "claude --print '{prompt}' --output-format text"
