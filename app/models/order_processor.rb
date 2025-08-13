@@ -8,17 +8,8 @@ class OrderProcessor
 
     items.sum do |item|
       next 0 if item.nil?
-      
-      price = item[:price]
-      quantity = item[:quantity]
-      
-      # Convert strings to numbers, handle invalid conversions
-      price = price.to_f if price.is_a?(String)
-      quantity = quantity.to_i if quantity.is_a?(String)
-      
-      # Skip items with nil, zero, or negative values
-      next 0 if price.nil? || quantity.nil? || price <= 0 || quantity <= 0
-      
+      price = item[:price].to_f
+      quantity = item[:quantity].to_i
       price * quantity
     end
   end
