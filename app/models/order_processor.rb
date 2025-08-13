@@ -9,11 +9,7 @@ class OrderProcessor
   
       # Business logic with error handling
       begin
-        total = 0
-        items.each do |item|
-          raise TypeError, "Item price must be an Integer" unless item.is_a?(Integer)
-          total += item
-        end
+        total = items.reduce(:+)
         Rails.logger.info("Total calculation successful: #{total}")
         total
       rescue TypeError => e
