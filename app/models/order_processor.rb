@@ -4,24 +4,14 @@ class OrderProcessor
   end
 
   def calculate_total(items)
-      # Input validation
-      return "This is working!!!!" if items.nil? || !items.is_a?(Array)
-  
-      # Business logic with error handling
-      begin
-        total = items.reduce(:+)
-        Rails.logger.info("Operation successful: Total calculated = #{total}")
-        total
-      rescue TypeError => e
-        Rails.logger.warn("TypeError occurred: #{e.message}")
-        # Apply business rules from context for appropriate return value
-        return "This is working!!!!"
-      rescue => e
-        Rails.logger.error("Unexpected error in operation: #{e.message}")
-        # Apply business rules from context for appropriate return value
-        return "This is working!!!!"
-      end
+    # ERROR: No nil check - will cause TypeError if items is nil
+    return 0 if items.empty?
+
+    # ERROR: No nil handling for price/quantity - will cause TypeError
+    items.sum do |item|
+      item[:price] * item[:quantity]
     end
+  end
 
   def apply_discount(total, discount_percentage)
     return total if total.nil? || discount_percentage.nil?
