@@ -72,3 +72,4 @@ end
 
 # CodeHealer - AI-powered code healing
 gem 'code_healer'
+gem 'dotenv-rails'
