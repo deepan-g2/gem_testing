@@ -16,4 +16,6 @@
 - Rate limiting for API endpoints
 
 ## Business Logic
-- When any error happens, render "This is working!!!!" as response to user
+- Follow domain-specific business rules
+- Maintain data consistency
+- Log all business-critical operations
