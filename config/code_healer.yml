@@ -1,0 +1,93 @@
+# CodeHealer Configuration
+enabled: true
+
+# Allowed classes for healing (customize as needed)
+allowed_classes:
+  - User
+  - Order
+  - PaymentProcessor
+  - OrderProcessor
+
+# Excluded classes (never touch these)
+excluded_classes:
+  - ApplicationController
+  - ApplicationRecord
+  - ApplicationJob
+  - ApplicationMailer
+  - ApplicationHelper
+
+# Allowed error types for healing
+allowed_error_types:
+  - ZeroDivisionError
+  - NoMethodError
+  - ArgumentError
+  - TypeError
+  - NameError
+  - ValidationError
+
+# Evolution Strategy Configuration
+evolution_strategy:
+  method: api  # Options: api, claude_code_terminal, hybrid
+  fallback_to_api: false  # If Claude Code fails, fall back to API
+
+# Claude Code Terminal Configuration
+claude_code:
+  enabled: false
+  timeout: 300  # Timeout in seconds
+  max_file_changes: 10
+  include_tests: true
+  command_template: "claude --print '{prompt}' --output-format text --permission-mode acceptEdits --allowedTools Edit"
+  business_context_sources:
+    - "config/business_rules.yml"
+    - "docs/business_logic.md"
+    - "spec/business_context_specs.rb"
+
+# Business Context Configuration
+business_context:
+  enabled: true
+  sources:
+    - "docs/business_rules.md"
+
+# OpenAI API configuration
+api:
+  provider: openai
+  model: gpt-4
+  max_tokens: 2000
+  temperature: 0.1
+
+# Git operations
+git:
+  auto_commit: true
+  auto_push: true
+  branch_prefix: "evolve"
+  commit_message_template: 'Fix {{class_name}}##{{method_name}}: {{error_type}}'
+  pr_target_branch: "master"
+
+# Pull Request Configuration
+pull_request:
+  enabled: true
+  auto_create: true
+  labels:
+    - "auto-fix"
+    - "self-evolving"
+    - "bug-fix"
+
+# Safety Configuration
+safety:
+  backup_before_evolution: true
+  rollback_on_syntax_error: true
+
+# Evolution Limits
+max_evolutions_per_day: 10
+
+# Notification Configuration (optional)
+notifications:
+  enabled: false
+  slack_webhook: ""
+  email_notifications: false
+
+# Performance Configuration
+performance:
+  max_concurrent_healing: 3
+  healing_timeout: 300
+  retry_attempts: 3
