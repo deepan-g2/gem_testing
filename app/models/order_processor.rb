@@ -9,7 +9,7 @@ class OrderProcessor
     
       # Business logic with error handling
       begin
-        total = items.reduce(0) { |sum, item| sum + item.price }
+        total = items.reduce(:+)
         Rails.logger.info("Total calculation successful: #{total}")
         total
       rescue TypeError => e
