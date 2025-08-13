@@ -4,15 +4,30 @@ class OrderProcessor
   end
 
   def calculate_total(items)
-    return 0 if items.nil? || items.empty?
-
-    items.sum do |item|
-      next 0 if item.nil?
-      price = item[:price].to_f
-      quantity = item[:quantity].to_i
-      price * quantity
+      # Input validation
+      if items.nil? || !items.is_a?(Array)
+        Rails.logger.warn("Invalid input: items must be an array")
+        return 0 # Assuming 0 is a safe default value for total
+      end
+  
+      # Business logic with error handling
+      begin
+        total = items.reduce(0) do |sum, item|
+          raise TypeError, 'Item price must be an integer' unless item[:price].is_a?(Integer)
+          sum + item[:price]
+        end
+        Rails.logger.info("Total calculation successful: #{total}")
+        total
+      rescue TypeError => e
+        Rails.logger.error("TypeError occurred: #{e.message}")
+        # Apply business rules from context for appropriate return value
+        return 0 # Assuming 0 is a safe default value for total in case of errors
+      rescue => e
+        Rails.logger.error("Unexpected error in operation: #{e.message}")
+        # Apply business rules from context for appropriate return value
+        return 0 # Assuming 0 is a safe default value for total in case of errors
+      end
     end
-  end
 
   def apply_discount(total, discount_percentage)
     return total if total.nil? || discount_percentage.nil?

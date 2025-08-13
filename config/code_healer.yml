@@ -27,12 +27,12 @@ allowed_error_types:
 
 # Evolution Strategy Configuration
 evolution_strategy:
-  method: claude_code_terminal  # Options: api, claude_code_terminal, hybrid
+  method: api  # Options: api, claude_code_terminal, hybrid
   fallback_to_api: false  # If Claude Code fails, fall back to API
 
 # Claude Code Terminal Configuration
 claude_code:
-  enabled: true
+  enabled: false
   timeout: 300  # Timeout in seconds
   max_file_changes: 10
   include_tests: true
@@ -59,9 +59,9 @@ api:
 git:
   auto_commit: true
   auto_push: true
-  branch_prefix: "ddddd"
+  branch_prefix: "evolve"
   commit_message_template: 'Fix {{class_name}}##{{method_name}}: {{error_type}}'
-  pr_target_branch: "master"
+  pr_target_branch: "main"
 
 # Pull Request Configuration
 pull_request:
