@@ -1,0 +1,10 @@
+:concurrency: 5
+:queues:
+  - [healing, 2]
+  - [default, 1]
+
+:redis:
+  :url: <%= ENV['REDIS_URL'] || 'redis://localhost:6379/0' %>
+
+:logfile: log/sidekiq.log
+:pidfile: tmp/pids/sidekiq.pid
