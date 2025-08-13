@@ -27,7 +27,7 @@ allowed_error_types:
 
 # Evolution Strategy Configuration
 evolution_strategy:
-  method: api  # Options: api, claude_code_terminal, hybrid
+  method: claude_code_terminal  # Options: api, claude_code_terminal, hybrid
   fallback_to_api: false  # If Claude Code fails, fall back to API
 
 # Claude Code Terminal Configuration
