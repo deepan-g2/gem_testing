@@ -9,34 +9,12 @@ class OrderProcessor
     items.sum do |item|
       next 0 if item.nil?
       
-      price = item[:price]
-      quantity = item[:quantity]
+      price = convert_to_number(item[:price])
+      quantity = convert_to_number(item[:quantity])
       
-      # Convert to numeric values, handling strings and nil
-      price_num = convert_to_number(price)
-      quantity_num = convert_to_number(quantity)
-      
-      # Only include items with positive price and quantity
-      next 0 if price_num <= 0 || quantity_num <= 0
-      
-      price_num * quantity_num
+      price * quantity
     end
   end
-
-  def convert_to_number(value)
-    return 0 if value.nil?
-    
-    case value
-    when Numeric
-      value.to_f
-    when String
-      Float(value) rescue 0
-    else
-      0
-    end
-  end
-
-  private
 
   def apply_discount(total, discount_percentage)
     return total if total.nil? || discount_percentage.nil?
@@ -62,5 +40,25 @@ class OrderProcessor
     else
       { success: false, error: 'Unsupported payment method' }
     end
+  end
+
+  def convert_to_number(value)
+    return 0.0 if value.nil?
+    return value.to_f if value.is_a?(Numeric)
+    
+    if value.is_a?(String)
+      cleaned_value = value.strip
+      return 0.0 if cleaned_value.empty?
+      
+      # Remove common currency symbols and extract numeric portion
+      numeric_string = cleaned_value.gsub(/[$€£¥₹]/, '').strip
+      
+      # Try to extract a valid number (including decimals)
+      match = numeric_string.match(/-?\d+\.?\d*/)
+      return match ? match[0].to_f : 0.0
+    end
+    
+    # For any other data type (arrays, hashes, booleans, etc.), return 0.0
+    0.0
   end
 end

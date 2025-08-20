@@ -149,4 +149,45 @@ class OrderProcessorTest < ActiveSupport::TestCase
     refute result[:success]
     assert_equal 'Invalid input', result[:error]
   end
+
+  # Tests for the new convert_to_number method
+  test "convert_to_number handles nil values" do
+    assert_equal 0.0, @processor.convert_to_number(nil)
+  end
+
+  test "convert_to_number handles empty string" do
+    assert_equal 0.0, @processor.convert_to_number("")
+    assert_equal 0.0, @processor.convert_to_number("   ")
+  end
+
+  test "convert_to_number handles numeric values" do
+    assert_equal 10.5, @processor.convert_to_number(10.5)
+    assert_equal 42.0, @processor.convert_to_number(42)
+    assert_equal 0.0, @processor.convert_to_number(0)
+    assert_equal(-5.5, @processor.convert_to_number(-5.5))
+  end
+
+  test "convert_to_number handles string numbers" do
+    assert_equal 10.5, @processor.convert_to_number("10.5")
+    assert_equal 42.0, @processor.convert_to_number("42")
+    assert_equal(-5.5, @processor.convert_to_number("-5.5"))
+  end
+
+  test "convert_to_number handles strings with currency symbols" do
+    assert_equal 10.50, @processor.convert_to_number("$10.50")
+    assert_equal 42.00, @processor.convert_to_number("€42.00")
+    assert_equal 25.99, @processor.convert_to_number("£25.99")
+  end
+
+  test "convert_to_number handles invalid strings" do
+    assert_equal 0.0, @processor.convert_to_number("invalid")
+    assert_equal 0.0, @processor.convert_to_number("abc123")
+    assert_equal 123.0, @processor.convert_to_number("abc123.00")
+  end
+
+  test "convert_to_number handles other data types" do
+    assert_equal 0.0, @processor.convert_to_number([])
+    assert_equal 0.0, @processor.convert_to_number({})
+    assert_equal 0.0, @processor.convert_to_number(true)
+  end
 end
