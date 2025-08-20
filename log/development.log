@@ -1,0 +1,535 @@
+Started POST "/api/order_processor/calculate_total" for ::1 at 2025-08-13 21:26:32 +0530
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::OrderProcessorController#calculate_total as */*
+  Parameters: {"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}], "order_processor"=>{"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}]}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 2016)
+
+
+  
+TypeError (nil can't be coerced into Integer):
+  
+app/models/order_processor.rb:12:in `*'
+app/models/order_processor.rb:12:in `block in calculate_total'
+app/models/order_processor.rb:11:in `sum'
+app/models/order_processor.rb:11:in `calculate_total'
+app/controllers/api/order_processor_controller.rb:11:in `calculate_total'
+Started POST "/api/order_processor/calculate_total" for ::1 at 2025-08-13 22:49:46 +0530
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::OrderProcessorController#calculate_total as */*
+  Parameters: {"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}], "order_processor"=>{"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}]}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 2016)
+
+
+  
+TypeError (nil can't be coerced into Integer):
+  
+app/models/order_processor.rb:12:in `*'
+app/models/order_processor.rb:12:in `block in calculate_total'
+app/models/order_processor.rb:11:in `sum'
+app/models/order_processor.rb:11:in `calculate_total'
+app/controllers/api/order_processor_controller.rb:11:in `calculate_total'
+Started POST "/api/order_processor/calculate_total" for ::1 at 2025-08-13 22:55:09 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::OrderProcessorController#calculate_total as */*
+  Parameters: {"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}], "order_processor"=>{"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}]}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1352)
+
+
+  
+TypeError (nil can't be coerced into Integer):
+  
+app/models/order_processor.rb:12:in `*'
+app/models/order_processor.rb:12:in `block in calculate_total'
+app/models/order_processor.rb:11:in `sum'
+app/models/order_processor.rb:11:in `calculate_total'
+app/controllers/api/order_processor_controller.rb:11:in `calculate_total'
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/api/order_processor/calculate_total" for ::1 at 2025-08-13 23:09:48 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::OrderProcessorController#calculate_total as */*
+  Parameters: {"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}], "order_processor"=>{"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}]}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1352)
+
+
+  
+TypeError (nil can't be coerced into Integer):
+  
+app/models/order_processor.rb:12:in `*'
+app/models/order_processor.rb:12:in `block in calculate_total'
+app/models/order_processor.rb:11:in `sum'
+app/models/order_processor.rb:11:in `calculate_total'
+app/controllers/api/order_processor_controller.rb:11:in `calculate_total'
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/api/order_processor/calculate_total" for ::1 at 2025-08-13 23:20:40 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::OrderProcessorController#calculate_total as */*
+  Parameters: {"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}], "order_processor"=>{"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}]}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1352)
+
+
+  
+TypeError (nil can't be coerced into Integer):
+  
+app/models/order_processor.rb:12:in `*'
+app/models/order_processor.rb:12:in `block in calculate_total'
+app/models/order_processor.rb:11:in `sum'
+app/models/order_processor.rb:11:in `calculate_total'
+app/controllers/api/order_processor_controller.rb:11:in `calculate_total'
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/api/order_processor/calculate_total" for ::1 at 2025-08-13 23:24:48 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::OrderProcessorController#calculate_total as */*
+  Parameters: {"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}], "order_processor"=>{"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}]}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1352)
+
+
+  
+TypeError (nil can't be coerced into Integer):
+  
+app/models/order_processor.rb:12:in `*'
+app/models/order_processor.rb:12:in `block in calculate_total'
+app/models/order_processor.rb:11:in `sum'
+app/models/order_processor.rb:11:in `calculate_total'
+app/controllers/api/order_processor_controller.rb:11:in `calculate_total'
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/api/order_processor/calculate_total" for ::1 at 2025-08-13 23:26:05 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::OrderProcessorController#calculate_total as */*
+  Parameters: {"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}], "order_processor"=>{"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}]}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1352)
+
+
+  
+TypeError (nil can't be coerced into Integer):
+  
+app/models/order_processor.rb:12:in `*'
+app/models/order_processor.rb:12:in `block in calculate_total'
+app/models/order_processor.rb:11:in `sum'
+app/models/order_processor.rb:11:in `calculate_total'
+app/controllers/api/order_processor_controller.rb:11:in `calculate_total'
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/api/order_processor/calculate_total" for ::1 at 2025-08-13 23:28:20 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::OrderProcessorController#calculate_total as */*
+  Parameters: {"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}], "order_processor"=>{"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}]}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1352)
+
+
+  
+TypeError (nil can't be coerced into Integer):
+  
+app/models/order_processor.rb:12:in `*'
+app/models/order_processor.rb:12:in `block in calculate_total'
+app/models/order_processor.rb:11:in `sum'
+app/models/order_processor.rb:11:in `calculate_total'
+app/controllers/api/order_processor_controller.rb:11:in `calculate_total'
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/api/order_processor/calculate_total" for ::1 at 2025-08-13 23:36:31 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::OrderProcessorController#calculate_total as */*
+  Parameters: {"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}], "order_processor"=>{"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}]}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1352)
+
+
+  
+TypeError (nil can't be coerced into Integer):
+  
+app/models/order_processor.rb:12:in `*'
+app/models/order_processor.rb:12:in `block in calculate_total'
+app/models/order_processor.rb:11:in `sum'
+app/models/order_processor.rb:11:in `calculate_total'
+app/controllers/api/order_processor_controller.rb:11:in `calculate_total'
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/api/order_processor/calculate_total" for ::1 at 2025-08-13 23:42:51 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::OrderProcessorController#calculate_total as */*
+  Parameters: {"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}], "order_processor"=>{"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}]}}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 1352)
+
+
+  
+TypeError (nil can't be coerced into Integer):
+  
+app/models/order_processor.rb:12:in `*'
+app/models/order_processor.rb:12:in `block in calculate_total'
+app/models/order_processor.rb:11:in `sum'
+app/models/order_processor.rb:11:in `calculate_total'
+app/controllers/api/order_processor_controller.rb:11:in `calculate_total'
+Pull request creation failed: POST https://api.github.com/repos/deepan-g2/gem_testing/pulls: 422 - Validation Failed
+Error summary:
+  resource: PullRequest
+  field: base
+  code: invalid // See: https://docs.github.com/rest/pulls/pulls#create-a-pull-request
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/api/order_processor/calculate_total" for ::1 at 2025-08-13 23:56:14 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::OrderProcessorController#calculate_total as */*
+  Parameters: {"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}], "order_processor"=>{"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}]}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1353)
+
+
+  
+TypeError (nil can't be coerced into Integer):
+  
+app/models/order_processor.rb:12:in `*'
+app/models/order_processor.rb:12:in `block in calculate_total'
+app/models/order_processor.rb:11:in `sum'
+app/models/order_processor.rb:11:in `calculate_total'
+app/controllers/api/order_processor_controller.rb:11:in `calculate_total'
+Pull request creation failed: POST https://api.github.com/repos/deepan-g2/gem_testing/pulls: 422 - Validation Failed
+Error summary:
+  resource: PullRequest
+  field: base
+  code: invalid // See: https://docs.github.com/rest/pulls/pulls#create-a-pull-request
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/api/order_processor/calculate_total" for ::1 at 2025-08-13 23:59:13 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::OrderProcessorController#calculate_total as */*
+  Parameters: {"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}], "order_processor"=>{"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}]}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1352)
+
+
+  
+TypeError (nil can't be coerced into Integer):
+  
+app/models/order_processor.rb:12:in `*'
+app/models/order_processor.rb:12:in `block in calculate_total'
+app/models/order_processor.rb:11:in `sum'
+app/models/order_processor.rb:11:in `calculate_total'
+app/controllers/api/order_processor_controller.rb:11:in `calculate_total'
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/api/order_processor/calculate_total" for ::1 at 2025-08-14 00:06:27 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::OrderProcessorController#calculate_total as */*
+  Parameters: {"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}], "order_processor"=>{"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}]}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1353)
+
+
+  
+TypeError (nil can't be coerced into Integer):
+  
+app/models/order_processor.rb:12:in `*'
+app/models/order_processor.rb:12:in `block in calculate_total'
+app/models/order_processor.rb:11:in `sum'
+app/models/order_processor.rb:11:in `calculate_total'
+app/controllers/api/order_processor_controller.rb:11:in `calculate_total'
+Pull request creation failed: POST https://api.github.com/repos/deepan-g2/gem_testing/pulls: 422 - Validation Failed
+Error summary:
+  resource: PullRequest
+  field: base
+  code: invalid // See: https://docs.github.com/rest/pulls/pulls#create-a-pull-request
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/api/order_processor/calculate_total" for ::1 at 2025-08-14 00:13:13 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::OrderProcessorController#calculate_total as */*
+  Parameters: {"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}], "order_processor"=>{"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}]}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1352)
+
+
+  
+TypeError (nil can't be coerced into Integer):
+  
+app/models/order_processor.rb:12:in `*'
+app/models/order_processor.rb:12:in `block in calculate_total'
+app/models/order_processor.rb:11:in `sum'
+app/models/order_processor.rb:11:in `calculate_total'
+app/controllers/api/order_processor_controller.rb:11:in `calculate_total'
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/api/order_processor/calculate_total" for ::1 at 2025-08-14 01:26:04 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::OrderProcessorController#calculate_total as */*
+  Parameters: {"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}], "order_processor"=>{"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}]}}
+Completed 400 Bad Request in 3ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1160)
+
+
+Started POST "/api/order_processor/calculate_total" for ::1 at 2025-08-14 01:26:37 +0530
+Processing by Api::OrderProcessorController#calculate_total as */*
+  Parameters: {"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}], "order_processor"=>{"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}]}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 551)
+
+
+  
+TypeError (nil can't be coerced into Integer):
+  
+app/models/order_processor.rb:12:in `*'
+app/models/order_processor.rb:12:in `block in calculate_total'
+app/models/order_processor.rb:11:in `sum'
+app/models/order_processor.rb:11:in `calculate_total'
+app/controllers/api/order_processor_controller.rb:11:in `calculate_total'
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/api/order_processor/calculate_total" for ::1 at 2025-08-14 01:27:48 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::OrderProcessorController#calculate_total as */*
+  Parameters: {"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}], "order_processor"=>{"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}]}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1352)
+
+
+  
+TypeError (nil can't be coerced into Integer):
+  
+app/models/order_processor.rb:12:in `*'
+app/models/order_processor.rb:12:in `block in calculate_total'
+app/models/order_processor.rb:11:in `sum'
+app/models/order_processor.rb:11:in `calculate_total'
+app/controllers/api/order_processor_controller.rb:11:in `calculate_total'
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked hosts: browsersync.test
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked hosts: browsersync.test
+[ActionDispatch::HostAuthorization::DefaultResponseApp] Blocked hosts: browsersync.test
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/api/order_processor/calculate_total" for ::1 at 2025-08-20 19:11:20 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::OrderProcessorController#calculate_total as */*
+  Parameters: {"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}], "order_processor"=>{"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}]}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1352)
+
+
+  
+TypeError (nil can't be coerced into Integer):
+  
+app/models/order_processor.rb:12:in `*'
+app/models/order_processor.rb:12:in `block in calculate_total'
+app/models/order_processor.rb:11:in `sum'
+app/models/order_processor.rb:11:in `calculate_total'
+app/controllers/api/order_processor_controller.rb:11:in `calculate_total'
+Started GET "/sidekiq/queues" for ::1 at 2025-08-20 19:13:04 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq/queues"):
+  
+Started GET "/sidekiq" for ::1 at 2025-08-20 19:13:42 +0530
+  
+ActionController::RoutingError (No route matches [GET] "/sidekiq"):
+  
+Started GET "/" for ::1 at 2025-08-20 19:13:56 +0530
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/railties-7.1.5.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/railties-7.1.5.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.4ms | Allocations: 270)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.0ms | Allocations: 1170)
+
+
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/api/order_processor/calculate_total" for ::1 at 2025-08-20 19:29:49 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::OrderProcessorController#calculate_total as */*
+  Parameters: {"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}], "order_processor"=>{"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}]}}
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1186)
+
+
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/api/order_processor/calculate_total" for ::1 at 2025-08-20 19:30:30 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::OrderProcessorController#calculate_total as */*
+  Parameters: {"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}], "order_processor"=>{"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}]}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1358)
+
+
+  
+NoMethodError (undefined method `convert_to_number' for #<OrderProcessor:0x000000010cbdff58 @supported_payment_methods=["credit_card", "debit_card", "paypal", "bank_transfer"]>):
+  
+app/controllers/api/order_processor_controller.rb:41:in `should_be_invalid?'
+app/controllers/api/order_processor_controller.rb:13:in `block in calculate_total'
+app/controllers/api/order_processor_controller.rb:13:in `all?'
+app/controllers/api/order_processor_controller.rb:13:in `calculate_total'
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/api/order_processor/calculate_total" for ::1 at 2025-08-20 19:47:09 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::OrderProcessorController#calculate_total as */*
+  Parameters: {"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}], "order_processor"=>{"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}]}}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms | Allocations: 1358)
+
+
+  
+NoMethodError (undefined method `convert_to_number' for #<OrderProcessor:0x00000001132927a0 @supported_payment_methods=["credit_card", "debit_card", "paypal", "bank_transfer"]>):
+  
+app/controllers/api/order_processor_controller.rb:41:in `should_be_invalid?'
+app/controllers/api/order_processor_controller.rb:13:in `block in calculate_total'
+app/controllers/api/order_processor_controller.rb:13:in `all?'
+app/controllers/api/order_processor_controller.rb:13:in `calculate_total'
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/broken_calculators/add_numbers?a=10&b=nil" for ::1 at 2025-08-20 19:50:23 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/broken_calculators/add_numbers"):
+  
+Started POST "/api/order_processor/calculate_total" for ::1 at 2025-08-20 19:51:42 +0530
+Processing by Api::OrderProcessorController#calculate_total as */*
+  Parameters: {"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}], "order_processor"=>{"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}]}}
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1163)
+
+
+Started POST "/api/order_processor/calculate_total" for ::1 at 2025-08-20 19:52:41 +0530
+Processing by Api::OrderProcessorController#calculate_total as */*
+  Parameters: {"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}], "order_processor"=>{"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}]}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 551)
+
+
+  
+TypeError (nil can't be coerced into Integer):
+  
+app/models/order_processor.rb:12:in `*'
+app/models/order_processor.rb:12:in `block in calculate_total'
+app/models/order_processor.rb:11:in `sum'
+app/models/order_processor.rb:11:in `calculate_total'
+app/controllers/api/order_processor_controller.rb:22:in `calculate_total'
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/api/order_processor/calculate_total" for ::1 at 2025-08-20 19:54:00 +0530
+Processing by Api::OrderProcessorController#calculate_total as */*
+  Parameters: {"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}], "order_processor"=>{"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}]}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 530)
+
+
+  
+TypeError (nil can't be coerced into Integer):
+  
+app/models/order_processor.rb:12:in `*'
+app/models/order_processor.rb:12:in `block in calculate_total'
+app/models/order_processor.rb:11:in `sum'
+app/models/order_processor.rb:11:in `calculate_total'
+app/controllers/api/order_processor_controller.rb:22:in `calculate_total'
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/api/order_processor/calculate_total" for ::1 at 2025-08-20 19:54:46 +0530
+Processing by Api::OrderProcessorController#calculate_total as */*
+  Parameters: {"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}], "order_processor"=>{"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}]}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 529)
+
+
+  
+TypeError (nil can't be coerced into Integer):
+  
+app/models/order_processor.rb:12:in `*'
+app/models/order_processor.rb:12:in `block in calculate_total'
+app/models/order_processor.rb:11:in `sum'
+app/models/order_processor.rb:11:in `calculate_total'
+app/controllers/api/order_processor_controller.rb:22:in `calculate_total'
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/sidekiq" for ::1 at 2025-08-20 19:56:52 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/sidekiq/stylesheets/bootstrap.css" for ::1 at 2025-08-20 19:56:52 +0530
+Started GET "/sidekiq/javascripts/chart.min.js" for ::1 at 2025-08-20 19:56:52 +0530
+Started GET "/sidekiq/stylesheets/application.css" for ::1 at 2025-08-20 19:56:52 +0530
+Started GET "/sidekiq/javascripts/application.js" for ::1 at 2025-08-20 19:56:52 +0530
+Started GET "/sidekiq/stylesheets/application-dark.css" for ::1 at 2025-08-20 19:56:52 +0530
+Started GET "/sidekiq/javascripts/chartjs-plugin-annotation.min.js" for ::1 at 2025-08-20 19:56:52 +0530
+Started GET "/sidekiq/javascripts/dashboard-charts.js" for ::1 at 2025-08-20 19:56:52 +0530
+Started GET "/sidekiq/javascripts/base-charts.js" for ::1 at 2025-08-20 19:56:52 +0530
+Started GET "/sidekiq/images/status.png" for ::1 at 2025-08-20 19:56:52 +0530
+Started GET "/sidekiq/javascripts/dashboard.js" for ::1 at 2025-08-20 19:56:52 +0530
+Started GET "/sidekiq/stats" for ::1 at 2025-08-20 19:56:52 +0530
+Started GET "/sidekiq/images/favicon.ico" for ::1 at 2025-08-20 19:56:52 +0530
+Started GET "/sidekiq/queues" for ::1 at 2025-08-20 19:56:54 +0530
+Started GET "/sidekiq/queues/default" for ::1 at 2025-08-20 19:56:57 +0530
+Started GET "/sidekiq/queues" for ::1 at 2025-08-20 19:57:00 +0530
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+Started GET "/sidekiq/queues" for ::1 at 2025-08-20 19:57:13 +0530
+Started POST "/api/order_processor/calculate_total" for ::1 at 2025-08-20 19:57:21 +0530
+Processing by Api::OrderProcessorController#calculate_total as */*
+  Parameters: {"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}], "order_processor"=>{"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}]}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1345)
+
+
+  
+TypeError (nil can't be coerced into Integer):
+  
+app/models/order_processor.rb:12:in `*'
+app/models/order_processor.rb:12:in `block in calculate_total'
+app/models/order_processor.rb:11:in `sum'
+app/models/order_processor.rb:11:in `calculate_total'
+app/controllers/api/order_processor_controller.rb:22:in `calculate_total'
+Started GET "/sidekiq/queues" for ::1 at 2025-08-20 19:57:29 +0530
