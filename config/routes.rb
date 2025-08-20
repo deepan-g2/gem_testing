@@ -7,4 +7,15 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  namespace :api do
+    resources :order_processor, only: [] do
+      collection do
+        post 'calculate_total'
+        post 'apply_discount'
+        post 'validate_order'
+        post 'process_payment'
+        get 'test_all_errors'
+      end
+    end
+  end
 end
