@@ -6,14 +6,21 @@ class OrderProcessor
   def calculate_total(items)
     return 0 if items.nil? || items.empty?
 
-    items.sum do |item|
-      next 0 if item.nil?
+    total = 0
+    items.each do |item|
+      next if item.nil?
       
       price = convert_to_number(item[:price])
       quantity = convert_to_number(item[:quantity])
       
-      price * quantity
+      # Ensure both values are numeric and not nil
+      next unless price.is_a?(Numeric) && quantity.is_a?(Numeric)
+      next if price <= 0 || quantity <= 0
+      
+      total += price * quantity
     end
+    
+    total
   end
 
   def apply_discount(total, discount_percentage)
@@ -43,6 +50,7 @@ class OrderProcessor
   end
 
   def convert_to_number(value)
+    # Always return a numeric value, never nil
     return 0.0 if value.nil?
     return value.to_f if value.is_a?(Numeric)
     
@@ -50,15 +58,23 @@ class OrderProcessor
       cleaned_value = value.strip
       return 0.0 if cleaned_value.empty?
       
-      # Remove common currency symbols and extract numeric portion
-      numeric_string = cleaned_value.gsub(/[$€£¥₹]/, '').strip
+      # Remove common currency symbols and commas
+      numeric_string = cleaned_value.gsub(/[$€£¥₹,]/, '').strip
       
       # Try to extract a valid number (including decimals)
-      match = numeric_string.match(/-?\d+\.?\d*/)
-      return match ? match[0].to_f : 0.0
+      # Updated regex to be more precise and handle edge cases
+      match = numeric_string.match(/-?\d+(?:\.\d+)?/)
+      result = match ? match[0].to_f : 0.0
+      
+      # Ensure result is always a valid number
+      return result.finite? ? result : 0.0
     end
     
     # For any other data type (arrays, hashes, booleans, etc.), return 0.0
+    0.0
+  rescue => e
+    # In case of any unexpected error, log it and return 0.0
+    Rails.logger.error("Error converting value to number: #{e.message}") if defined?(Rails)
     0.0
   end
 end

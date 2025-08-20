@@ -533,3 +533,32 @@ app/models/order_processor.rb:11:in `sum'
 app/models/order_processor.rb:11:in `calculate_total'
 app/controllers/api/order_processor_controller.rb:22:in `calculate_total'
 Started GET "/sidekiq/queues" for ::1 at 2025-08-20 19:57:29 +0530
+Started GET "/sidekiq/queues" for ::1 at 2025-08-20 20:01:46 +0530
+Started GET "/sidekiq/busy" for ::1 at 2025-08-20 20:01:49 +0530
+Started GET "/sidekiq/queues" for ::1 at 2025-08-20 20:01:52 +0530
+Started GET "/sidekiq/queues/evolution" for ::1 at 2025-08-20 20:01:54 +0530
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+[dotenv] Set [36mGITHUB_TOKEN[0m, [36mGITHUB_REPOSITORY[0m, and [36mREDIS_URL[0m
+[dotenv] Loaded [33m.env[0m
+Started POST "/api/order_processor/calculate_total" for ::1 at 2025-08-20 20:22:55 +0530
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::OrderProcessorController#calculate_total as */*
+  Parameters: {"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}], "order_processor"=>{"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}]}}
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1186)
+
+
+Started POST "/api/order_processor/calculate_total" for ::1 at 2025-08-20 20:23:30 +0530
+Processing by Api::OrderProcessorController#calculate_total as */*
+  Parameters: {"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}], "order_processor"=>{"items"=>[{"price"=>10, "quantity"=>5}, {"price"=>10, "quantity"=>nil}]}}
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 554)
+
+
+  
+TypeError (nil can't be coerced into Integer):
+  
+app/models/order_processor.rb:12:in `*'
+app/models/order_processor.rb:12:in `block in calculate_total'
+app/models/order_processor.rb:11:in `sum'
+app/models/order_processor.rb:11:in `calculate_total'
+app/controllers/api/order_processor_controller.rb:22:in `calculate_total'

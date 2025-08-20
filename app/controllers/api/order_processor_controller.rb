@@ -2,31 +2,46 @@ class Api::OrderProcessorController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def calculate_total
-    items = params[:items] || []
+    begin
+      items = params[:items] || []
 
-    # Convert Rails parameters to regular hashes
-    items = items.map { |item| item.to_unsafe_h.symbolize_keys } if items.any?
+      # Convert Rails parameters to regular hashes
+      items = items.map { |item| item.to_unsafe_h.symbolize_keys } if items.any?
 
-    processor = OrderProcessor.new
-    
-    # Check if all items have zero/negative/invalid values and should return error
-    if items.any? && items.all? { |item| should_be_invalid?(item, processor) }
+      processor = OrderProcessor.new
+      
+      # Check if all items have zero/negative/invalid values and should return error
+      if items.any? && items.all? { |item| should_be_invalid?(item, processor) }
+        Rails.logger.warn("Invalid order calculation attempted: all items invalid")
+        render json: {
+          success: false,
+          error: "Invalid order items", 
+          message: "All items must have valid price and quantity"
+        }, status: :bad_request
+        return
+      end
+
+      result = processor.calculate_total(items)
+
+      # Ensure result is a valid number
+      result = 0.0 unless result.is_a?(Numeric) && result.finite?
+
+      render json: {
+        success: true,
+        total: result,
+        items: items,
+        message: "Total calculated successfully"
+      }
+    rescue => e
+      Rails.logger.error("Error calculating order total: #{e.message}")
+      Rails.logger.error(e.backtrace.join("\n"))
+      
       render json: {
         success: false,
-        error: "Invalid order items", 
-        message: "All items must have valid price and quantity"
-      }, status: :bad_request
-      return
+        error: "Calculation error",
+        message: "Unable to calculate order total"
+      }, status: :internal_server_error
     end
-
-    result = processor.calculate_total(items)
-
-    render json: {
-      success: true,
-      total: result,
-      items: items,
-      message: "Total calculated successfully"
-    }
   end
 
   private

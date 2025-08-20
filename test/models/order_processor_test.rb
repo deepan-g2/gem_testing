@@ -68,7 +68,7 @@ class OrderProcessorTest < ActiveSupport::TestCase
     assert_equal expected, @processor.calculate_total(items)
   end
 
-  test "calculate_total handles zero price" do
+  test "calculate_total skips zero price items" do
     items = [
       { price: 0, quantity: 2 },
       { price: 5.25, quantity: 3 }
@@ -77,7 +77,7 @@ class OrderProcessorTest < ActiveSupport::TestCase
     assert_equal expected, @processor.calculate_total(items)
   end
 
-  test "calculate_total handles zero quantity" do
+  test "calculate_total skips zero quantity items" do
     items = [
       { price: 10.50, quantity: 0 },
       { price: 5.25, quantity: 3 }
@@ -86,7 +86,7 @@ class OrderProcessorTest < ActiveSupport::TestCase
     assert_equal expected, @processor.calculate_total(items)
   end
 
-  test "calculate_total handles negative price" do
+  test "calculate_total skips negative price items" do
     items = [
       { price: -10.50, quantity: 2 },
       { price: 5.25, quantity: 3 }
@@ -95,7 +95,7 @@ class OrderProcessorTest < ActiveSupport::TestCase
     assert_equal expected, @processor.calculate_total(items)
   end
 
-  test "calculate_total handles negative quantity" do
+  test "calculate_total skips negative quantity items" do
     items = [
       { price: 10.50, quantity: -2 },
       { price: 5.25, quantity: 3 }
@@ -189,5 +189,45 @@ class OrderProcessorTest < ActiveSupport::TestCase
     assert_equal 0.0, @processor.convert_to_number([])
     assert_equal 0.0, @processor.convert_to_number({})
     assert_equal 0.0, @processor.convert_to_number(true)
+  end
+
+  test "convert_to_number handles edge cases that could return nil" do
+    assert_equal 0.0, @processor.convert_to_number(Float::INFINITY)
+    assert_equal 0.0, @processor.convert_to_number(-Float::INFINITY)
+    assert_equal 0.0, @processor.convert_to_number(Float::NAN)
+  end
+
+  test "convert_to_number handles strings with commas" do
+    assert_equal 1000.50, @processor.convert_to_number("1,000.50")
+    assert_equal 1000.50, @processor.convert_to_number("$1,000.50")
+  end
+
+  test "calculate_total handles complex edge cases" do
+    items = [
+      { price: Float::INFINITY, quantity: 2 },
+      { price: Float::NAN, quantity: 3 },
+      { price: 10.50, quantity: 2 }
+    ]
+    expected = 10.50 * 2
+    assert_equal expected, @processor.calculate_total(items)
+  end
+
+  test "calculate_total handles all invalid items" do
+    items = [
+      { price: 0, quantity: 2 },
+      { price: -5, quantity: 3 },
+      { price: nil, quantity: nil }
+    ]
+    assert_equal 0, @processor.calculate_total(items)
+  end
+
+  test "calculate_total never returns nil" do
+    result = @processor.calculate_total([])
+    assert_not_nil result
+    assert result.is_a?(Numeric)
+    
+    result = @processor.calculate_total(nil)
+    assert_not_nil result
+    assert result.is_a?(Numeric)
   end
 end
