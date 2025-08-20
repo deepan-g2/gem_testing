@@ -13,8 +13,7 @@ class OrderProcessor
       price = convert_to_number(item[:price])
       quantity = convert_to_number(item[:quantity])
       
-      # Ensure both values are numeric and not nil
-      next unless price.is_a?(Numeric) && quantity.is_a?(Numeric)
+      # Skip items with zero or negative values (business rule)
       next if price <= 0 || quantity <= 0
       
       total += price * quantity
