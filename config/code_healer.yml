@@ -27,12 +27,12 @@ allowed_error_types:
 
 # Evolution Strategy Configuration
 evolution_strategy:
-  method: api  # Options: api, claude_code_terminal, hybrid
+  method: claude_code_terminal  # Options: api, claude_code_terminal, hybrid
   fallback_to_api: false  # If Claude Code fails, fall back to API
 
 # Claude Code Terminal Configuration
 claude_code:
-  enabled: false
+  enabled: true
   timeout: 300  # Timeout in seconds
   max_file_changes: 10
   include_tests: true
@@ -91,3 +91,11 @@ performance:
   max_concurrent_healing: 3
   healing_timeout: 300
   retry_attempts: 3
+
+# Code Heal Directory Configuration
+code_heal_directory:
+  path: "/tmp/code_healer_workspaces"
+  auto_cleanup: true
+  cleanup_after_hours: 24
+  max_workspaces: 10
+  clone_strategy: "branch"  # Options: branch, full_repo

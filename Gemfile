@@ -71,5 +71,5 @@ group :test do
 end
 
 # CodeHealer - AI-powered code healing
-gem 'code_healer'
+gem 'code_healer', path: '../SelfRuby/code_healer_gem'
 gem 'dotenv-rails'
