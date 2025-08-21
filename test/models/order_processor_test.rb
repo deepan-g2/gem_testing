@@ -230,4 +230,84 @@ class OrderProcessorTest < ActiveSupport::TestCase
     assert_not_nil result
     assert result.is_a?(Numeric)
   end
+
+  test "convert_to_number handles edge case numeric values that caused TypeError" do
+    # These are the edge cases that could cause nil to be returned
+    assert_equal 0.0, @processor.convert_to_number(Float::INFINITY)
+    assert_equal 0.0, @processor.convert_to_number(-Float::INFINITY)
+    assert_equal 0.0, @processor.convert_to_number(Float::NAN)
+    
+    # Test numeric values are properly handled
+    assert_equal 42.0, @processor.convert_to_number(42)
+    assert_equal 42.5, @processor.convert_to_number(42.5)
+    assert_equal(-42.0, @processor.convert_to_number(-42))
+  end
+
+  test "convert_to_number handles problematic string patterns that could cause nil" do
+    # Empty string after cleaning
+    assert_equal 0.0, @processor.convert_to_number("$$$")
+    assert_equal 0.0, @processor.convert_to_number("€€€")
+    
+    # String with only currency symbols and spaces
+    assert_equal 0.0, @processor.convert_to_number("  $  €  £  ")
+    
+    # Very malformed strings
+    assert_equal 0.0, @processor.convert_to_number("not a number at all")
+    assert_equal 0.0, @processor.convert_to_number("abc.def.ghi")
+    
+    # Edge case: string that becomes empty after regex cleaning
+    assert_equal 0.0, @processor.convert_to_number(",,,")
+  end
+
+  test "calculate_total handles items that could cause multiplication TypeError" do
+    # Items with values that could result in nil after conversion
+    items = [
+      { price: Float::INFINITY, quantity: 2 },
+      { price: Float::NAN, quantity: 3 },
+      { price: "invalid", quantity: "also_invalid" },
+      { price: "$$$", quantity: "€€€" },
+      { price: nil, quantity: nil },
+      { price: 10.0, quantity: 2.0 }  # This should be the only valid item
+    ]
+    
+    expected = 10.0 * 2.0
+    result = @processor.calculate_total(items)
+    assert_equal expected, result
+    assert result.is_a?(Numeric)
+    assert result.finite?
+  end
+
+  test "calculate_total always returns finite numbers" do
+    # Test various edge cases that should never cause TypeError
+    test_cases = [
+      [],
+      nil,
+      [nil],
+      [{ price: nil, quantity: nil }],
+      [{ price: Float::INFINITY, quantity: Float::INFINITY }],
+      [{ price: Float::NAN, quantity: Float::NAN }],
+      [{ price: "invalid", quantity: "invalid" }]
+    ]
+    
+    test_cases.each do |items|
+      result = @processor.calculate_total(items)
+      assert result.is_a?(Numeric), "Result should be numeric for items: #{items.inspect}"
+      assert result.finite?, "Result should be finite for items: #{items.inspect}"
+      assert result >= 0, "Result should be non-negative for items: #{items.inspect}"
+    end
+  end
+
+  test "calculate_total handles multiplication overflow scenarios" do
+    # Test very large numbers that could cause overflow
+    items = [
+      { price: 1e100, quantity: 1e100 },  # This could cause overflow
+      { price: 10.0, quantity: 2.0 }     # Valid item
+    ]
+    
+    result = @processor.calculate_total(items)
+    assert result.is_a?(Numeric)
+    assert result.finite?
+    # Should only include the valid item since overflow is skipped
+    assert_equal 20.0, result
+  end
 end

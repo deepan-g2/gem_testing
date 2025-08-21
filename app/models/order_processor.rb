@@ -4,22 +4,31 @@ class OrderProcessor
   end
 
   def calculate_total(items)
-    return 0 if items.nil? || items.empty?
+    return 0.0 if items.nil? || items.empty?
 
-    total = 0
+    total = 0.0
     items.each do |item|
       next if item.nil?
       
       price = convert_to_number(item[:price])
       quantity = convert_to_number(item[:quantity])
       
+      # Additional safety check to ensure both values are numeric and finite
+      next unless price.is_a?(Numeric) && quantity.is_a?(Numeric)
+      next unless price.finite? && quantity.finite?
+      
       # Skip items with zero or negative values (business rule)
       next if price <= 0 || quantity <= 0
       
-      total += price * quantity
+      item_total = price * quantity
+      # Ensure the multiplication result is also valid
+      next unless item_total.finite?
+      
+      total += item_total
     end
     
-    total
+    # Ensure final result is always a valid finite number
+    total.finite? ? total : 0.0
   end
 
   def apply_discount(total, discount_percentage)
@@ -51,27 +60,42 @@ class OrderProcessor
   def convert_to_number(value)
     # Always return a numeric value, never nil
     return 0.0 if value.nil?
-    return value.to_f if value.is_a?(Numeric)
     
+    # Handle numeric values, checking for validity
+    if value.is_a?(Numeric)
+      return value.finite? ? value.to_f : 0.0
+    end
+    
+    # Handle string values
     if value.is_a?(String)
       cleaned_value = value.strip
       return 0.0 if cleaned_value.empty?
       
       # Remove common currency symbols and commas
       numeric_string = cleaned_value.gsub(/[$€£¥₹,]/, '').strip
+      return 0.0 if numeric_string.empty?
       
       # Try to extract a valid number (including decimals)
-      # Updated regex to be more precise and handle edge cases
-      match = numeric_string.match(/-?\d+(?:\.\d+)?/)
-      result = match ? match[0].to_f : 0.0
+      # Use anchored regex to match entire string for better precision
+      if numeric_string.match(/\A-?\d+(?:\.\d+)?\z/)
+        result = numeric_string.to_f
+        # Ensure result is always a valid finite number
+        return result.finite? ? result : 0.0
+      end
       
-      # Ensure result is always a valid number
-      return result.finite? ? result : 0.0
+      # If no exact match, try to extract the first valid number
+      match = numeric_string.match(/-?\d+(?:\.\d+)?/)
+      if match
+        result = match[0].to_f
+        return result.finite? ? result : 0.0
+      end
+      
+      return 0.0
     end
     
     # For any other data type (arrays, hashes, booleans, etc.), return 0.0
     0.0
-  rescue => e
+  rescue StandardError => e
     # In case of any unexpected error, log it and return 0.0
     Rails.logger.error("Error converting value to number: #{e.message}") if defined?(Rails)
     0.0
