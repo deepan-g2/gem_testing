@@ -230,4 +230,42 @@ class OrderProcessorTest < ActiveSupport::TestCase
     assert_not_nil result
     assert result.is_a?(Numeric)
   end
+
+  test "calculate_total handles convert_to_number returning nil (edge case)" do
+    # Mock convert_to_number to return nil for testing safety checks
+    @processor.define_singleton_method(:convert_to_number) do |value|
+      return nil if value == "trigger_nil"
+      0.0
+    end
+    
+    items = [
+      { price: "trigger_nil", quantity: 2 },
+      { price: 10.50, quantity: 3 }
+    ]
+    expected = 10.50 * 3
+    assert_equal expected, @processor.calculate_total(items)
+  end
+
+  test "calculate_total handles infinite values gracefully" do
+    # Mock convert_to_number to return infinity for testing
+    @processor.define_singleton_method(:convert_to_number) do |value|
+      return Float::INFINITY if value == "infinity"
+      return Float::NAN if value == "nan"
+      value.to_f
+    end
+    
+    items = [
+      { price: "infinity", quantity: 2 },
+      { price: "nan", quantity: 3 },
+      { price: 10.50, quantity: 2 }
+    ]
+    expected = 10.50 * 2
+    assert_equal expected, @processor.calculate_total(items)
+  end
+
+  test "calculate_total returns finite result even with edge case arithmetic" do
+    # Test that the final result is always finite
+    result = @processor.calculate_total([{ price: Float::MAX, quantity: Float::MAX }])
+    assert result.finite?
+  end
 end

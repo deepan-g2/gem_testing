@@ -94,4 +94,38 @@ class Api::OrderProcessorControllerTest < ActionDispatch::IntegrationTest
     expected_total = (10.50 * 2) + (5.25 * 3)
     assert_equal expected_total, json_response['total']
   end
+
+  test "calculate_total handles edge cases that could cause nil coercion errors" do
+    post '/api/order_processor/calculate_total', params: {
+      items: [
+        { price: "", quantity: nil },
+        { price: "invalid_string", quantity: "also_invalid" },
+        { price: Float::INFINITY, quantity: Float::NAN },
+        { price: 10.50, quantity: 2 }
+      ]
+    }
+
+    assert_response :success
+    json_response = JSON.parse(response.body)
+    assert json_response['success']
+    expected_total = 10.50 * 2
+    assert_equal expected_total, json_response['total']
+    assert_equal "Total calculated successfully", json_response['message']
+  end
+
+  test "calculate_total with mixed valid and invalid data types" do
+    post '/api/order_processor/calculate_total', params: {
+      items: [
+        { price: [], quantity: {} },
+        { price: true, quantity: false },
+        { price: 15.75, quantity: 1 }
+      ]
+    }
+
+    assert_response :success
+    json_response = JSON.parse(response.body)
+    assert json_response['success']
+    expected_total = 15.75 * 1
+    assert_equal expected_total, json_response['total']
+  end
 end

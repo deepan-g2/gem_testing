@@ -6,20 +6,28 @@ class OrderProcessor
   def calculate_total(items)
     return 0 if items.nil? || items.empty?
 
-    total = 0
+    total = 0.0
     items.each do |item|
       next if item.nil?
       
+      # Safely extract and convert values to prevent nil coercion errors
       price = convert_to_number(item[:price])
       quantity = convert_to_number(item[:quantity])
+      
+      # Additional nil check as safety measure (convert_to_number should never return nil)
+      next if price.nil? || quantity.nil?
       
       # Skip items with zero or negative values (business rule)
       next if price <= 0 || quantity <= 0
       
+      # Ensure both values are finite numbers before multiplication
+      next unless price.finite? && quantity.finite?
+      
       total += price * quantity
     end
     
-    total
+    # Ensure result is always a finite number
+    total.finite? ? total : 0.0
   end
 
   def apply_discount(total, discount_percentage)
