@@ -4,22 +4,29 @@ class OrderProcessor
   end
 
   def calculate_total(items)
-    return 0 if items.nil? || items.empty?
+    return 0.0 if items.nil? || items.empty?
 
-    total = 0
+    total = 0.0
     items.each do |item|
       next if item.nil?
       
       price = convert_to_number(item[:price])
       quantity = convert_to_number(item[:quantity])
       
+      # Ensure both values are valid numbers before multiplication
+      next unless price.is_a?(Numeric) && quantity.is_a?(Numeric)
+      next unless price.finite? && quantity.finite?
+      
       # Skip items with zero or negative values (business rule)
       next if price <= 0 || quantity <= 0
       
-      total += price * quantity
+      line_total = price * quantity
+      # Additional safety check for the multiplication result
+      total += line_total.finite? ? line_total : 0.0
     end
     
-    total
+    # Ensure final result is always a valid number
+    total.is_a?(Numeric) && total.finite? ? total : 0.0
   end
 
   def apply_discount(total, discount_percentage)
@@ -51,7 +58,12 @@ class OrderProcessor
   def convert_to_number(value)
     # Always return a numeric value, never nil
     return 0.0 if value.nil?
-    return value.to_f if value.is_a?(Numeric)
+    
+    if value.is_a?(Numeric)
+      # Handle special numeric values that could cause coercion errors
+      return 0.0 unless value.finite?
+      return value.to_f
+    end
     
     if value.is_a?(String)
       cleaned_value = value.strip
@@ -65,8 +77,8 @@ class OrderProcessor
       match = numeric_string.match(/-?\d+(?:\.\d+)?/)
       result = match ? match[0].to_f : 0.0
       
-      # Ensure result is always a valid number
-      return result.finite? ? result : 0.0
+      # Ensure result is always a valid, finite number
+      return (result.is_a?(Numeric) && result.finite?) ? result : 0.0
     end
     
     # For any other data type (arrays, hashes, booleans, etc.), return 0.0
