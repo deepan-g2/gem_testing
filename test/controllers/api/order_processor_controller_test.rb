@@ -94,4 +94,41 @@ class Api::OrderProcessorControllerTest < ActionDispatch::IntegrationTest
     expected_total = (10.50 * 2) + (5.25 * 3)
     assert_equal expected_total, json_response['total']
   end
+
+  test "calculate_total handles malformed data that could cause nil coercion error" do
+    # Test the exact types of data that could cause "nil can't be coerced into Integer"
+    post '/api/order_processor/calculate_total', params: {
+      items: [
+        { price: "NaN", quantity: "Infinity" },
+        { price: "", quantity: "" },
+        { price: "invalid", quantity: "bad" },
+        { price: 10.50, quantity: 2 }  # One valid item
+      ]
+    }
+
+    assert_response :success
+    json_response = JSON.parse(response.body)
+    assert json_response['success']
+    assert_equal 21.0, json_response['total']  # Only the valid item should be calculated
+    assert json_response['total'].is_a?(Numeric)
+  end
+
+  test "calculate_total handles extreme edge cases without errors" do
+    post '/api/order_processor/calculate_total', params: {
+      items: [
+        { price: Float::NAN, quantity: Float::INFINITY },
+        { price: nil, quantity: nil },
+        {},  # empty hash
+        { price: [], quantity: {} },  # wrong data types
+        { price: true, quantity: false },  # boolean values
+      ]
+    }
+
+    # Should still return success with total 0, not crash with nil coercion error
+    assert_response :success
+    json_response = JSON.parse(response.body)
+    assert json_response['success']
+    assert_equal 0, json_response['total']
+    assert json_response['total'].is_a?(Numeric)
+  end
 end

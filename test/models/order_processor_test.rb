@@ -230,4 +230,69 @@ class OrderProcessorTest < ActiveSupport::TestCase
     assert_not_nil result
     assert result.is_a?(Numeric)
   end
+
+  test "calculate_total handles malformed data that could cause nil coercion" do
+    # These are the types of items that could cause the original error
+    malformed_items = [
+      { price: "NaN", quantity: "Infinity" },
+      { price: "", quantity: "" },
+      { price: "   ", quantity: "   " },
+      { price: [], quantity: {} },
+      { price: true, quantity: false },
+      { price: Float::NAN, quantity: Float::INFINITY },
+      { price: nil, quantity: nil },
+      {}  # completely empty item
+    ]
+    
+    # Should not raise any errors and should return 0
+    result = @processor.calculate_total(malformed_items)
+    assert_equal 0, result
+    assert_not_nil result
+    assert result.is_a?(Numeric)
+  end
+
+  test "calculate_total handles mixed valid and invalid data without errors" do
+    mixed_items = [
+      { price: 10.50, quantity: 2 },         # valid
+      { price: Float::NAN, quantity: 3 },    # invalid - NaN
+      { price: nil, quantity: nil },         # invalid - nil values
+      { price: "invalid", quantity: "bad" }, # invalid - bad strings
+      { price: 5.25, quantity: 1 },         # valid
+      nil,                                   # invalid - nil item
+      {},                                    # invalid - empty item
+      { price: [], quantity: {} }            # invalid - wrong types
+    ]
+    
+    expected = (10.50 * 2) + (5.25 * 1)
+    result = @processor.calculate_total(mixed_items)
+    assert_equal expected, result
+    assert result.is_a?(Numeric)
+  end
+
+  test "convert_to_number handles all edge cases that could return nil" do
+    # Test all cases that historically caused nil coercion errors
+    test_cases = [
+      [nil, 0.0],
+      [Float::NAN, 0.0],
+      [Float::INFINITY, 0.0],
+      [-Float::INFINITY, 0.0],
+      ["", 0.0],
+      ["   ", 0.0],
+      ["NaN", 0.0],
+      ["Infinity", 0.0],
+      [[], 0.0],
+      [{}, 0.0],
+      [true, 0.0],
+      [false, 0.0],
+      ["invalid_string", 0.0]
+    ]
+    
+    test_cases.each do |input, expected|
+      result = @processor.convert_to_number(input)
+      assert_equal expected, result, "Failed for input: #{input.inspect}"
+      assert_not_nil result
+      assert result.is_a?(Numeric)
+      assert result.finite?, "Result should be finite for input: #{input.inspect}"
+    end
+  end
 end

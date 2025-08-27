@@ -13,10 +13,18 @@ class OrderProcessor
       price = convert_to_number(item[:price])
       quantity = convert_to_number(item[:quantity])
       
+      # Ensure we have valid numeric values before proceeding
+      next unless price.is_a?(Numeric) && quantity.is_a?(Numeric)
+      next unless price.finite? && quantity.finite?
+      
       # Skip items with zero or negative values (business rule)
       next if price <= 0 || quantity <= 0
       
-      total += price * quantity
+      # Perform multiplication with additional nil safety
+      line_total = price * quantity
+      next unless line_total.is_a?(Numeric) && line_total.finite?
+      
+      total += line_total
     end
     
     total
@@ -51,7 +59,12 @@ class OrderProcessor
   def convert_to_number(value)
     # Always return a numeric value, never nil
     return 0.0 if value.nil?
-    return value.to_f if value.is_a?(Numeric)
+    
+    # Handle numeric values
+    if value.is_a?(Numeric)
+      # Ensure the numeric value is finite and valid
+      return value.finite? ? value.to_f : 0.0
+    end
     
     if value.is_a?(String)
       cleaned_value = value.strip
