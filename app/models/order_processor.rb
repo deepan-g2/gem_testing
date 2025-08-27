@@ -13,10 +13,20 @@ class OrderProcessor
       price = convert_to_number(item[:price])
       quantity = convert_to_number(item[:quantity])
       
+      # Additional safety: ensure we never have nil values (should never happen with convert_to_number)
+      next if price.nil? || quantity.nil?
+      
       # Skip items with zero or negative values (business rule)
       next if price <= 0 || quantity <= 0
       
-      total += price * quantity
+      # Ensure both values are finite numbers before multiplication
+      next unless price.is_a?(Numeric) && quantity.is_a?(Numeric) && price.finite? && quantity.finite?
+      
+      item_total = price * quantity
+      # Ensure the result is also finite
+      next unless item_total.finite?
+      
+      total += item_total
     end
     
     total

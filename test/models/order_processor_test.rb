@@ -212,6 +212,26 @@ class OrderProcessorTest < ActiveSupport::TestCase
     assert_equal expected, @processor.calculate_total(items)
   end
 
+  test "calculate_total handles multiplication that results in infinity" do
+    items = [
+      { price: 1e308, quantity: 2 },  # This multiplication would result in infinity
+      { price: 10.50, quantity: 2 }
+    ]
+    # Should skip the infinity result and only include the valid item
+    expected = 10.50 * 2
+    assert_equal expected, @processor.calculate_total(items)
+  end
+
+  test "calculate_total ensures total is always finite" do
+    items = [
+      { price: 10.50, quantity: 2 },
+      { price: 5.25, quantity: 3 }
+    ]
+    result = @processor.calculate_total(items)
+    assert result.finite?, "Result should always be finite"
+    assert result.is_a?(Numeric), "Result should be numeric"
+  end
+
   test "calculate_total handles all invalid items" do
     items = [
       { price: 0, quantity: 2 },

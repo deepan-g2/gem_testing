@@ -94,4 +94,22 @@ class Api::OrderProcessorControllerTest < ActionDispatch::IntegrationTest
     expected_total = (10.50 * 2) + (5.25 * 3)
     assert_equal expected_total, json_response['total']
   end
+
+  test "calculate_total with extreme values handles gracefully" do
+    post '/api/order_processor/calculate_total', params: {
+      items: [
+        { price: Float::INFINITY, quantity: 2 },
+        { price: Float::NAN, quantity: 3 },
+        { price: 1e308, quantity: 2 },  # Would result in infinity
+        { price: 10.50, quantity: 2 }
+      ]
+    }
+
+    assert_response :success
+    json_response = JSON.parse(response.body)
+    assert json_response['success']
+    # Should only include the valid item
+    expected_total = 10.50 * 2
+    assert_equal expected_total, json_response['total']
+  end
 end

@@ -70,6 +70,12 @@ def test_fix
   expected = 10.0 * 2
   puts "✓ infinity/NaN values: #{result == expected ? 'PASS' : 'FAIL'} (expected: #{expected}, got: #{result})"
   
+  # Test 11a: multiplication that would result in infinity
+  items = [{ price: 1e308, quantity: 2 }, { price: 10.0, quantity: 2 }]
+  result = processor.calculate_total(items)
+  expected = 10.0 * 2
+  puts "✓ multiplication resulting in infinity: #{result == expected ? 'PASS' : 'FAIL'} (expected: #{expected}, got: #{result})"
+  
   # Test 12: non-numeric types that could return nil
   items = [{ price: [], quantity: {} }, { price: true, quantity: false }, { price: 10.0, quantity: 2 }]
   result = processor.calculate_total(items)
