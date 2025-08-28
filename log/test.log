@@ -1,0 +1,1633 @@
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_skips_zero_price_items
+---------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_empty_array
+------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_string_values
+--------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_nil_items_in_array
+-------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_complex_edge_cases
+-------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_missing_quantity_key
+---------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_nil_values
+-------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_nil_items
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_string_numbers
+-----------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_edge_cases_that_could_return_nil
+-----------------------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_strings_with_currency_symbols
+--------------------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_empty_string
+---------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_strings_with_commas
+----------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_skips_negative_price_items
+-------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_other_data_types
+-------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_valid_items
+------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_nil_price
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_nil_quantity
+-------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_skips_negative_quantity_items
+----------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------
+OrderProcessorTest: test_process_payment_works_correctly
+--------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+OrderProcessorTest: test_apply_discount_works_correctly
+-------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+OrderProcessorTest: test_validate_order_works_correctly
+-------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_skips_zero_quantity_items
+------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_invalid_strings
+------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_numeric_values
+-----------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+OrderProcessorTest: test_calculate_total_never_returns_nil
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_invalid_string_values
+----------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_all_invalid_items
+------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_missing_price_key
+------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_nil_quantity
+-------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_numeric_values
+-----------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_all_invalid_items
+------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_empty_array
+------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_missing_quantity_key
+---------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_nil_price
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_empty_string
+---------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_nil_items
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_nil_items_in_array
+-------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_complex_edge_cases
+-------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+OrderProcessorTest: test_apply_discount_works_correctly
+-------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_strings_with_currency_symbols
+--------------------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_edge_cases_that_could_return_nil
+-----------------------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_skips_zero_quantity_items
+------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_missing_price_key
+------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_invalid_string_values
+----------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------
+OrderProcessorTest: test_process_payment_works_correctly
+--------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_string_numbers
+-----------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_other_data_types
+-------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+OrderProcessorTest: test_validate_order_works_correctly
+-------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_skips_negative_price_items
+-------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_strings_with_commas
+----------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_skips_negative_quantity_items
+----------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_valid_items
+------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_string_values
+--------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_nil_values
+-------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_skips_zero_price_items
+---------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+OrderProcessorTest: test_calculate_total_never_returns_nil
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_invalid_strings
+------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_numeric_values
+-----------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_strings_with_commas
+----------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_missing_price_key
+------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_other_data_types
+-------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_skips_zero_quantity_items
+------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_strings_with_currency_symbols
+--------------------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_missing_quantity_key
+---------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------
+OrderProcessorTest: test_process_payment_works_correctly
+--------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_nil_items
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_nil_values
+-------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+OrderProcessorTest: test_validate_order_works_correctly
+-------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+OrderProcessorTest: test_apply_discount_works_correctly
+-------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_string_values
+--------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_nil_items_in_array
+-------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_nil_quantity
+-------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_empty_array
+------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_skips_negative_quantity_items
+----------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+OrderProcessorTest: test_calculate_total_never_returns_nil
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_skips_negative_price_items
+-------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_nil_price
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_string_numbers
+-----------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_empty_string
+---------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_invalid_string_values
+----------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_complex_edge_cases
+-------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_all_invalid_items
+------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_valid_items
+------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_skips_zero_price_items
+---------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_invalid_strings
+------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_edge_cases_that_could_return_nil
+-----------------------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_nil_price
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+OrderProcessorTest: test_validate_order_works_correctly
+-------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_numeric_values
+-----------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_missing_quantity_key
+---------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+OrderProcessorTest: test_calculate_total_never_returns_nil
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_skips_negative_price_items
+-------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_nil_quantity
+-------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_empty_string
+---------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_nil_items_in_array
+-------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+OrderProcessorTest: test_apply_discount_works_correctly
+-------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_missing_price_key
+------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_skips_zero_quantity_items
+------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_valid_items
+------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_edge_cases_that_could_return_nil
+-----------------------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_complex_edge_cases
+-------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_skips_zero_price_items
+---------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_all_invalid_items
+------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_strings_with_currency_symbols
+--------------------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_skips_negative_quantity_items
+----------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_nil_items
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_invalid_string_values
+----------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_nil_values
+-------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------
+OrderProcessorTest: test_process_payment_works_correctly
+--------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_invalid_strings
+------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_strings_with_commas
+----------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_other_data_types
+-------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_string_numbers
+-----------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_string_values
+--------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_empty_array
+------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------------------------------
+Api::OrderProcessorControllerTest: test_calculate_total_with_nil_values_handles_gracefully
+------------------------------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+Started POST "/api/order_processor/calculate_total" for 127.0.0.1 at 2025-08-28 19:00:42 +0530
+Processing by Api::OrderProcessorController#calculate_total as HTML
+  Parameters: {"items"=>[{"price"=>nil, "quantity"=>"2"}, {"price"=>"10.5", "quantity"=>"3"}]}
+Order total calculation requested at 2025-08-28 13:30:42 UTC
+Order total calculated successfully: 31.5 for 2 items
+Completed 200 OK in 2ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1391)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------------------
+Api::OrderProcessorControllerTest: test_calculate_total_with_all_invalid_items_returns_error
+--------------------------------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+Started POST "/api/order_processor/calculate_total" for 127.0.0.1 at 2025-08-28 19:00:42 +0530
+Processing by Api::OrderProcessorController#calculate_total as HTML
+  Parameters: {"items"=>[{"price"=>"0", "quantity"=>"2"}, {"price"=>"-5", "quantity"=>"1"}, {"price"=>nil, "quantity"=>"0"}]}
+Order total calculation requested at 2025-08-28 13:30:42 UTC
+Invalid order calculation attempted: all items invalid - [{:price=>"0", :quantity=>"2"}, {:price=>"-5", :quantity=>"1"}, {:price=>nil, :quantity=>"0"}]
+Completed 400 Bad Request in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms | Allocations: 209)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------------------------------
+Api::OrderProcessorControllerTest: test_calculate_total_with_string_values_works_correctly
+------------------------------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+Started POST "/api/order_processor/calculate_total" for 127.0.0.1 at 2025-08-28 19:00:42 +0530
+Processing by Api::OrderProcessorController#calculate_total as HTML
+  Parameters: {"items"=>[{"price"=>"10.50", "quantity"=>"2"}, {"price"=>"$5.25", "quantity"=>"3"}]}
+Order total calculation requested at 2025-08-28 13:30:42 UTC
+Order total calculated successfully: 36.75 for 2 items
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms | Allocations: 202)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------------------------------
+Api::OrderProcessorControllerTest: test_calculate_total_with_no_params_defaults_to_empty_array
+----------------------------------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+Started POST "/api/order_processor/calculate_total" for 127.0.0.1 at 2025-08-28 19:00:42 +0530
+Processing by Api::OrderProcessorController#calculate_total as HTML
+Order total calculation requested at 2025-08-28 13:30:42 UTC
+Order total calculated successfully: 0 for 0 items
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms | Allocations: 112)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------------------------
+Api::OrderProcessorControllerTest: test_calculate_total_with_valid_items_returns_success
+----------------------------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+Started POST "/api/order_processor/calculate_total" for 127.0.0.1 at 2025-08-28 19:00:42 +0530
+Processing by Api::OrderProcessorController#calculate_total as HTML
+  Parameters: {"items"=>[{"price"=>"10.5", "quantity"=>"2"}, {"price"=>"5.25", "quantity"=>"3"}]}
+Order total calculation requested at 2025-08-28 13:30:42 UTC
+Order total calculated successfully: 36.75 for 2 items
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 198)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------------
+Api::OrderProcessorControllerTest: test_calculate_total_with_empty_items_returns_zero
+-------------------------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+Started POST "/api/order_processor/calculate_total" for 127.0.0.1 at 2025-08-28 19:00:42 +0530
+Processing by Api::OrderProcessorController#calculate_total as HTML
+  Parameters: {"items"=>[""]}
+Order total calculation requested at 2025-08-28 13:30:42 UTC
+Critical error in order total calculation: NoMethodError - undefined method `to_unsafe_h' for "":String
+Request params: #<ActionController::Parameters {"items"=>[""], "controller"=>"api/order_processor", "action"=>"calculate_total"} permitted: false>
+Stack trace: /private/tmp/code_healer_workspaces/healing_1756387692_9f9db6b6/app/controllers/api/order_processor_controller.rb:12:in `block in calculate_total'
+/private/tmp/code_healer_workspaces/healing_1756387692_9f9db6b6/app/controllers/api/order_processor_controller.rb:12:in `map'
+/private/tmp/code_healer_workspaces/healing_1756387692_9f9db6b6/app/controllers/api/order_processor_controller.rb:12:in `calculate_total'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/abstract_controller/base.rb:224:in `process_action'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_controller/metal/rendering.rb:165:in `process_action'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/abstract_controller/callbacks.rb:259:in `block in process_action'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/turbo-rails-2.0.16/lib/turbo-rails.rb:24:in `with_request_id'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/turbo-rails-2.0.16/app/controllers/concerns/turbo/request_id_tracking.rb:10:in `turbo_tracking_request_id'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actiontext-7.1.5.1/lib/action_text/rendering.rb:23:in `with_renderer'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actiontext-7.1.5.1/lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/callbacks.rb:130:in `instance_exec'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/callbacks.rb:141:in `run_callbacks'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/abstract_controller/callbacks.rb:258:in `process_action'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_controller/metal/rescue.rb:25:in `process_action'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/notifications.rb:206:in `block in instrument'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/notifications.rb:206:in `instrument'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activerecord-7.1.5.1/lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/abstract_controller/base.rb:160:in `process'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionview-7.1.5.1/lib/action_view/rendering.rb:40:in `process'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_controller/metal.rb:227:in `dispatch'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_controller/metal.rb:309:in `dispatch'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/routing/route_set.rb:32:in `serve'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/journey/router.rb:51:in `block in serve'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/journey/router.rb:124:in `each'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/journey/router.rb:124:in `find_routes'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/journey/router.rb:32:in `serve'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/routing/route_set.rb:882:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/rack-3.2.0/lib/rack/tempfile_reaper.rb:20:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/rack-3.2.0/lib/rack/etag.rb:29:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/rack-3.2.0/lib/rack/conditional_get.rb:44:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/rack-3.2.0/lib/rack/head.rb:15:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/rack-session-2.1.1/lib/rack/session/abstract/id.rb:274:in `context'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/rack-session-2.1.1/lib/rack/session/abstract/id.rb:268:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/middleware/cookies.rb:689:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/callbacks.rb:101:in `run_callbacks'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/railties-7.1.5.1/lib/rails/rack/logger.rb:37:in `call_app'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/railties-7.1.5.1/lib/rails/rack/logger.rb:24:in `block in call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/tagged_logging.rb:139:in `block in tagged'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/tagged_logging.rb:39:in `tagged'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/tagged_logging.rb:139:in `tagged'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/broadcast_logger.rb:241:in `method_missing'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/railties-7.1.5.1/lib/rails/rack/logger.rb:24:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/middleware/request_id.rb:28:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/rack-3.2.0/lib/rack/method_override.rb:28:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/rack-3.2.0/lib/rack/runtime.rb:24:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/middleware/static.rb:25:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/rack-3.2.0/lib/rack/sendfile.rb:114:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/railties-7.1.5.1/lib/rails/engine.rb:536:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/rack-test-2.2.0/lib/rack/test.rb:360:in `process_request'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/rack-test-2.2.0/lib/rack/test.rb:153:in `request'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/testing/integration.rb:288:in `process'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/testing/integration.rb:22:in `post'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/testing/integration.rb:379:in `post'
+/private/tmp/code_healer_workspaces/healing_1756387692_9f9db6b6/test/controllers/api/order_processor_controller_test.rb:21:in `block in <class:OrderProcessorControllerTest>'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest/test.rb:94:in `block (2 levels) in run'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest/test.rb:190:in `capture_exceptions'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest/test.rb:89:in `block in run'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest.rb:368:in `time_it'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest/test.rb:88:in `run'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/executor/test_helper.rb:5:in `block in run'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/execution_wrapper.rb:105:in `perform'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/executor/test_helper.rb:5:in `run'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest.rb:1208:in `run_one_method'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest.rb:447:in `run_one_method'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest.rb:434:in `block (2 levels) in run'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest.rb:430:in `each'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest.rb:430:in `block in run'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest.rb:472:in `on_signal'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest.rb:459:in `with_info_handler'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest.rb:429:in `run'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/railties-7.1.5.1/lib/rails/test_unit/line_filtering.rb:10:in `run'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest.rb:332:in `block in __run'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest.rb:332:in `map'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest.rb:332:in `__run'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest.rb:288:in `run'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest.rb:86:in `block in autorun'
+Completed 500 Internal Server Error in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms | Allocations: 254)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------------------------
+Api::OrderProcessorControllerTest: test_calculate_total_with_invalid_items_returns_error
+----------------------------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+Started POST "/api/order_processor/calculate_total" for 127.0.0.1 at 2025-08-28 19:00:42 +0530
+Processing by Api::OrderProcessorController#calculate_total as HTML
+  Parameters: {"items"=>[{"price"=>"0", "quantity"=>"2"}]}
+Order total calculation requested at 2025-08-28 13:30:42 UTC
+Invalid order calculation attempted: all items invalid - [{:price=>"0", :quantity=>"2"}]
+Completed 400 Bad Request in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms | Allocations: 143)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------------
+Api::OrderProcessorControllerTest: test_calculate_total_with_empty_items_returns_zero
+-------------------------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+Started POST "/api/order_processor/calculate_total" for 127.0.0.1 at 2025-08-28 19:00:59 +0530
+Processing by Api::OrderProcessorController#calculate_total as HTML
+  Parameters: {"items"=>[""]}
+Order total calculation requested at 2025-08-28 13:30:59 UTC
+Critical error in order total calculation: NoMethodError - undefined method `to_unsafe_h' for "":String
+Request params: #<ActionController::Parameters {"items"=>[""], "controller"=>"api/order_processor", "action"=>"calculate_total"} permitted: false>
+Stack trace: /private/tmp/code_healer_workspaces/healing_1756387692_9f9db6b6/app/controllers/api/order_processor_controller.rb:12:in `block in calculate_total'
+/private/tmp/code_healer_workspaces/healing_1756387692_9f9db6b6/app/controllers/api/order_processor_controller.rb:12:in `map'
+/private/tmp/code_healer_workspaces/healing_1756387692_9f9db6b6/app/controllers/api/order_processor_controller.rb:12:in `calculate_total'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/abstract_controller/base.rb:224:in `process_action'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_controller/metal/rendering.rb:165:in `process_action'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/abstract_controller/callbacks.rb:259:in `block in process_action'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/turbo-rails-2.0.16/lib/turbo-rails.rb:24:in `with_request_id'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/turbo-rails-2.0.16/app/controllers/concerns/turbo/request_id_tracking.rb:10:in `turbo_tracking_request_id'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actiontext-7.1.5.1/lib/action_text/rendering.rb:23:in `with_renderer'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actiontext-7.1.5.1/lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/callbacks.rb:130:in `instance_exec'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/callbacks.rb:141:in `run_callbacks'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/abstract_controller/callbacks.rb:258:in `process_action'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_controller/metal/rescue.rb:25:in `process_action'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/notifications.rb:206:in `block in instrument'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/notifications.rb:206:in `instrument'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activerecord-7.1.5.1/lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/abstract_controller/base.rb:160:in `process'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionview-7.1.5.1/lib/action_view/rendering.rb:40:in `process'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_controller/metal.rb:227:in `dispatch'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_controller/metal.rb:309:in `dispatch'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/routing/route_set.rb:32:in `serve'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/journey/router.rb:51:in `block in serve'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/journey/router.rb:124:in `each'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/journey/router.rb:124:in `find_routes'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/journey/router.rb:32:in `serve'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/routing/route_set.rb:882:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/rack-3.2.0/lib/rack/tempfile_reaper.rb:20:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/rack-3.2.0/lib/rack/etag.rb:29:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/rack-3.2.0/lib/rack/conditional_get.rb:44:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/rack-3.2.0/lib/rack/head.rb:15:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/rack-session-2.1.1/lib/rack/session/abstract/id.rb:274:in `context'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/rack-session-2.1.1/lib/rack/session/abstract/id.rb:268:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/middleware/cookies.rb:689:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/callbacks.rb:101:in `run_callbacks'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/railties-7.1.5.1/lib/rails/rack/logger.rb:37:in `call_app'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/railties-7.1.5.1/lib/rails/rack/logger.rb:24:in `block in call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/tagged_logging.rb:139:in `block in tagged'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/tagged_logging.rb:39:in `tagged'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/tagged_logging.rb:139:in `tagged'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/broadcast_logger.rb:241:in `method_missing'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/railties-7.1.5.1/lib/rails/rack/logger.rb:24:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/middleware/request_id.rb:28:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/rack-3.2.0/lib/rack/method_override.rb:28:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/rack-3.2.0/lib/rack/runtime.rb:24:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/middleware/static.rb:25:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/rack-3.2.0/lib/rack/sendfile.rb:114:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/railties-7.1.5.1/lib/rails/engine.rb:536:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/rack-test-2.2.0/lib/rack/test.rb:360:in `process_request'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/rack-test-2.2.0/lib/rack/test.rb:153:in `request'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/testing/integration.rb:288:in `process'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/testing/integration.rb:22:in `post'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/testing/integration.rb:379:in `post'
+/private/tmp/code_healer_workspaces/healing_1756387692_9f9db6b6/test/controllers/api/order_processor_controller_test.rb:21:in `block in <class:OrderProcessorControllerTest>'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest/test.rb:94:in `block (2 levels) in run'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest/test.rb:190:in `capture_exceptions'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest/test.rb:89:in `block in run'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest.rb:368:in `time_it'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest/test.rb:88:in `run'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/executor/test_helper.rb:5:in `block in run'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/execution_wrapper.rb:105:in `perform'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/executor/test_helper.rb:5:in `run'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest.rb:1208:in `run_one_method'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest.rb:447:in `run_one_method'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest.rb:434:in `block (2 levels) in run'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest.rb:430:in `each'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest.rb:430:in `block in run'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest.rb:472:in `on_signal'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest.rb:459:in `with_info_handler'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest.rb:429:in `run'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/railties-7.1.5.1/lib/rails/test_unit/line_filtering.rb:10:in `run'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest.rb:332:in `block in __run'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest.rb:332:in `map'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest.rb:332:in `__run'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest.rb:288:in `run'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest.rb:86:in `block in autorun'
+Completed 500 Internal Server Error in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1325)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------------
+Api::OrderProcessorControllerTest: test_calculate_total_with_empty_items_returns_zero
+-------------------------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+Started POST "/api/order_processor/calculate_total" for 127.0.0.1 at 2025-08-28 19:01:46 +0530
+Processing by Api::OrderProcessorController#calculate_total as HTML
+  Parameters: {"items"=>[""]}
+Order total calculation requested at 2025-08-28 13:31:46 UTC
+Critical error in order total calculation: NoMethodError - undefined method `to_unsafe_h' for "":String
+Request params: #<ActionController::Parameters {"items"=>[""], "controller"=>"api/order_processor", "action"=>"calculate_total"} permitted: false>
+Stack trace: /private/tmp/code_healer_workspaces/healing_1756387692_9f9db6b6/app/controllers/api/order_processor_controller.rb:12:in `block in calculate_total'
+/private/tmp/code_healer_workspaces/healing_1756387692_9f9db6b6/app/controllers/api/order_processor_controller.rb:12:in `map'
+/private/tmp/code_healer_workspaces/healing_1756387692_9f9db6b6/app/controllers/api/order_processor_controller.rb:12:in `calculate_total'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/abstract_controller/base.rb:224:in `process_action'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_controller/metal/rendering.rb:165:in `process_action'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/abstract_controller/callbacks.rb:259:in `block in process_action'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/callbacks.rb:121:in `block in run_callbacks'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/turbo-rails-2.0.16/lib/turbo-rails.rb:24:in `with_request_id'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/turbo-rails-2.0.16/app/controllers/concerns/turbo/request_id_tracking.rb:10:in `turbo_tracking_request_id'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actiontext-7.1.5.1/lib/action_text/rendering.rb:23:in `with_renderer'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actiontext-7.1.5.1/lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/callbacks.rb:130:in `instance_exec'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/callbacks.rb:130:in `block in run_callbacks'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/callbacks.rb:141:in `run_callbacks'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/abstract_controller/callbacks.rb:258:in `process_action'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_controller/metal/rescue.rb:25:in `process_action'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_controller/metal/instrumentation.rb:74:in `block in process_action'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/notifications.rb:206:in `block in instrument'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/notifications/instrumenter.rb:58:in `instrument'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/notifications.rb:206:in `instrument'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_controller/metal/instrumentation.rb:73:in `process_action'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_controller/metal/params_wrapper.rb:261:in `process_action'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activerecord-7.1.5.1/lib/active_record/railties/controller_runtime.rb:32:in `process_action'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/abstract_controller/base.rb:160:in `process'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionview-7.1.5.1/lib/action_view/rendering.rb:40:in `process'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_controller/metal.rb:227:in `dispatch'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_controller/metal.rb:309:in `dispatch'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/routing/route_set.rb:32:in `serve'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/journey/router.rb:51:in `block in serve'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/journey/router.rb:131:in `block in find_routes'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/journey/router.rb:124:in `each'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/journey/router.rb:124:in `find_routes'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/journey/router.rb:32:in `serve'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/routing/route_set.rb:882:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/rack-3.2.0/lib/rack/tempfile_reaper.rb:20:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/rack-3.2.0/lib/rack/etag.rb:29:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/rack-3.2.0/lib/rack/conditional_get.rb:44:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/rack-3.2.0/lib/rack/head.rb:15:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/http/permissions_policy.rb:36:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/rack-session-2.1.1/lib/rack/session/abstract/id.rb:274:in `context'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/rack-session-2.1.1/lib/rack/session/abstract/id.rb:268:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/middleware/cookies.rb:689:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/callbacks.rb:101:in `run_callbacks'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/railties-7.1.5.1/lib/rails/rack/logger.rb:37:in `call_app'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/railties-7.1.5.1/lib/rails/rack/logger.rb:24:in `block in call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/tagged_logging.rb:139:in `block in tagged'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/tagged_logging.rb:39:in `tagged'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/tagged_logging.rb:139:in `tagged'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/broadcast_logger.rb:241:in `method_missing'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/railties-7.1.5.1/lib/rails/rack/logger.rb:24:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/middleware/request_id.rb:28:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/rack-3.2.0/lib/rack/method_override.rb:28:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/rack-3.2.0/lib/rack/runtime.rb:24:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/middleware/static.rb:25:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/rack-3.2.0/lib/rack/sendfile.rb:114:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/railties-7.1.5.1/lib/rails/engine.rb:536:in `call'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/rack-test-2.2.0/lib/rack/test.rb:360:in `process_request'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/rack-test-2.2.0/lib/rack/test.rb:153:in `request'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/testing/integration.rb:288:in `process'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/testing/integration.rb:22:in `post'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/actionpack-7.1.5.1/lib/action_dispatch/testing/integration.rb:379:in `post'
+/private/tmp/code_healer_workspaces/healing_1756387692_9f9db6b6/test/controllers/api/order_processor_controller_test.rb:21:in `block in <class:OrderProcessorControllerTest>'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest/test.rb:94:in `block (2 levels) in run'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest/test.rb:190:in `capture_exceptions'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest/test.rb:89:in `block in run'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest.rb:368:in `time_it'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest/test.rb:88:in `run'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/executor/test_helper.rb:5:in `block in run'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/execution_wrapper.rb:105:in `perform'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/activesupport-7.1.5.1/lib/active_support/executor/test_helper.rb:5:in `run'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest.rb:1208:in `run_one_method'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest.rb:447:in `run_one_method'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest.rb:434:in `block (2 levels) in run'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest.rb:430:in `each'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest.rb:430:in `block in run'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest.rb:472:in `on_signal'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest.rb:459:in `with_info_handler'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest.rb:429:in `run'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/railties-7.1.5.1/lib/rails/test_unit/line_filtering.rb:10:in `run'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest.rb:332:in `block in __run'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest.rb:332:in `map'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest.rb:332:in `__run'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest.rb:288:in `run'
+/Users/dkumar/.asdf/installs/ruby/3.2.4/lib/ruby/gems/3.2.0/gems/minitest-5.25.5/lib/minitest.rb:86:in `block in autorun'
+Completed 500 Internal Server Error in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1325)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------------
+Api::OrderProcessorControllerTest: test_calculate_total_with_empty_items_returns_zero
+-------------------------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+Started POST "/api/order_processor/calculate_total" for 127.0.0.1 at 2025-08-28 19:02:18 +0530
+Processing by Api::OrderProcessorController#calculate_total as HTML
+  Parameters: {"items"=>[""]}
+Order total calculation requested at 2025-08-28 13:32:18 UTC
+Order total calculated successfully: 0 for 0 items
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1278)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------------------------------
+Api::OrderProcessorControllerTest: test_calculate_total_with_no_params_defaults_to_empty_array
+----------------------------------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+Started POST "/api/order_processor/calculate_total" for 127.0.0.1 at 2025-08-28 19:02:26 +0530
+Processing by Api::OrderProcessorController#calculate_total as HTML
+Order total calculation requested at 2025-08-28 13:32:26 UTC
+Order total calculated successfully: 0 for 0 items
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 1271)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------------------------------
+Api::OrderProcessorControllerTest: test_calculate_total_with_nil_values_handles_gracefully
+------------------------------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+Started POST "/api/order_processor/calculate_total" for 127.0.0.1 at 2025-08-28 19:02:26 +0530
+Processing by Api::OrderProcessorController#calculate_total as HTML
+  Parameters: {"items"=>[{"price"=>nil, "quantity"=>"2"}, {"price"=>"10.5", "quantity"=>"3"}]}
+Order total calculation requested at 2025-08-28 13:32:26 UTC
+Order total calculated successfully: 31.5 for 2 items
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms | Allocations: 236)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------------------
+Api::OrderProcessorControllerTest: test_calculate_total_with_all_invalid_items_returns_error
+--------------------------------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+Started POST "/api/order_processor/calculate_total" for 127.0.0.1 at 2025-08-28 19:02:26 +0530
+Processing by Api::OrderProcessorController#calculate_total as HTML
+  Parameters: {"items"=>[{"price"=>"0", "quantity"=>"2"}, {"price"=>"-5", "quantity"=>"1"}, {"price"=>nil, "quantity"=>"0"}]}
+Order total calculation requested at 2025-08-28 13:32:26 UTC
+Invalid order calculation attempted: all items invalid - [{:price=>"0", :quantity=>"2"}, {:price=>"-5", :quantity=>"1"}, {:price=>nil, :quantity=>"0"}]
+Completed 400 Bad Request in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms | Allocations: 210)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------------------------
+Api::OrderProcessorControllerTest: test_calculate_total_with_valid_items_returns_success
+----------------------------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+Started POST "/api/order_processor/calculate_total" for 127.0.0.1 at 2025-08-28 19:02:26 +0530
+Processing by Api::OrderProcessorController#calculate_total as HTML
+  Parameters: {"items"=>[{"price"=>"10.5", "quantity"=>"2"}, {"price"=>"5.25", "quantity"=>"3"}]}
+Order total calculation requested at 2025-08-28 13:32:26 UTC
+Order total calculated successfully: 36.75 for 2 items
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms | Allocations: 199)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------------
+Api::OrderProcessorControllerTest: test_calculate_total_with_empty_items_returns_zero
+-------------------------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+Started POST "/api/order_processor/calculate_total" for 127.0.0.1 at 2025-08-28 19:02:26 +0530
+Processing by Api::OrderProcessorController#calculate_total as HTML
+  Parameters: {"items"=>[""]}
+Order total calculation requested at 2025-08-28 13:32:26 UTC
+Order total calculated successfully: 0 for 0 items
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms | Allocations: 113)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------------------------
+Api::OrderProcessorControllerTest: test_calculate_total_with_invalid_items_returns_error
+----------------------------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+Started POST "/api/order_processor/calculate_total" for 127.0.0.1 at 2025-08-28 19:02:26 +0530
+Processing by Api::OrderProcessorController#calculate_total as HTML
+  Parameters: {"items"=>[{"price"=>"0", "quantity"=>"2"}]}
+Order total calculation requested at 2025-08-28 13:32:26 UTC
+Invalid order calculation attempted: all items invalid - [{:price=>"0", :quantity=>"2"}]
+Completed 400 Bad Request in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms | Allocations: 144)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------------------------------
+Api::OrderProcessorControllerTest: test_calculate_total_with_string_values_works_correctly
+------------------------------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+Started POST "/api/order_processor/calculate_total" for 127.0.0.1 at 2025-08-28 19:02:26 +0530
+Processing by Api::OrderProcessorController#calculate_total as HTML
+  Parameters: {"items"=>[{"price"=>"10.50", "quantity"=>"2"}, {"price"=>"$5.25", "quantity"=>"3"}]}
+Order total calculation requested at 2025-08-28 13:32:26 UTC
+Order total calculated successfully: 36.75 for 2 items
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms | Allocations: 203)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_complex_edge_cases
+-------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_invalid_strings
+------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_string_values
+--------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_empty_array
+------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+OrderProcessorTest: test_calculate_total_never_returns_nil
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------
+OrderProcessorTest: test_process_payment_works_correctly
+--------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_nil_values
+-------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_nil_quantity
+-------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_skips_zero_quantity_items
+------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_string_numbers
+-----------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_valid_items
+------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_skips_negative_price_items
+-------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_all_invalid_items
+------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_empty_string
+---------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_nil_items_in_array
+-------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+OrderProcessorTest: test_validate_order_works_correctly
+-------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_strings_with_commas
+----------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_missing_quantity_key
+---------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_edge_cases_that_could_return_nil
+-----------------------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_skips_negative_quantity_items
+----------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_other_data_types
+-------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_invalid_string_values
+----------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_numeric_values
+-----------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_nil_items
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_skips_zero_price_items
+---------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+OrderProcessorTest: test_apply_discount_works_correctly
+-------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_nil_price
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_missing_price_key
+------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_strings_with_currency_symbols
+--------------------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_empty_array
+------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_string_values
+--------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_valid_items
+------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+OrderProcessorTest: test_calculate_total_never_returns_nil
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_invalid_string_values
+----------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_string_numbers
+-----------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_skips_zero_price_items
+---------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_nil_items
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_other_data_types
+-------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_missing_price_key
+------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_skips_zero_quantity_items
+------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_numeric_values
+-----------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_nil_values
+-------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_skips_negative_quantity_items
+----------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_nil_price
+----------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+OrderProcessorTest: test_validate_order_works_correctly
+-------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_nil_items_in_array
+-------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_empty_string
+---------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+---------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_missing_quantity_key
+---------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------
+OrderProcessorTest: test_process_payment_works_correctly
+--------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_complex_edge_cases
+-------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_nil_quantity
+-------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-----------------------------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_edge_cases_that_could_return_nil
+-----------------------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_invalid_strings
+------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------
+OrderProcessorTest: test_apply_discount_works_correctly
+-------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_handles_all_invalid_items
+------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_strings_with_currency_symbols
+--------------------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------
+OrderProcessorTest: test_calculate_total_skips_negative_price_items
+-------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------
+OrderProcessorTest: test_convert_to_number_handles_strings_with_commas
+----------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------------------------------
+Api::OrderProcessorControllerTest: test_calculate_total_with_no_params_defaults_to_empty_array
+----------------------------------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+Started POST "/api/order_processor/calculate_total" for 127.0.0.1 at 2025-08-28 19:02:45 +0530
+Processing by Api::OrderProcessorController#calculate_total as HTML
+Order total calculation requested at 2025-08-28 13:32:45 UTC
+Order total calculated successfully: 0 for 0 items
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 1181)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------------------------------
+Api::OrderProcessorControllerTest: test_calculate_total_with_string_values_works_correctly
+------------------------------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+Started POST "/api/order_processor/calculate_total" for 127.0.0.1 at 2025-08-28 19:02:45 +0530
+Processing by Api::OrderProcessorController#calculate_total as HTML
+  Parameters: {"items"=>[{"price"=>"10.50", "quantity"=>"2"}, {"price"=>"$5.25", "quantity"=>"3"}]}
+Order total calculation requested at 2025-08-28 13:32:45 UTC
+Order total calculated successfully: 36.75 for 2 items
+Completed 200 OK in 0ms (Views: 0.1ms | ActiveRecord: 0.0ms | Allocations: 233)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+------------------------------------------------------------------------------------------
+Api::OrderProcessorControllerTest: test_calculate_total_with_nil_values_handles_gracefully
+------------------------------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+Started POST "/api/order_processor/calculate_total" for 127.0.0.1 at 2025-08-28 19:02:45 +0530
+Processing by Api::OrderProcessorController#calculate_total as HTML
+  Parameters: {"items"=>[{"price"=>nil, "quantity"=>"2"}, {"price"=>"10.5", "quantity"=>"3"}]}
+Order total calculation requested at 2025-08-28 13:32:45 UTC
+Order total calculated successfully: 31.5 for 2 items
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms | Allocations: 201)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+--------------------------------------------------------------------------------------------
+Api::OrderProcessorControllerTest: test_calculate_total_with_all_invalid_items_returns_error
+--------------------------------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+Started POST "/api/order_processor/calculate_total" for 127.0.0.1 at 2025-08-28 19:02:45 +0530
+Processing by Api::OrderProcessorController#calculate_total as HTML
+  Parameters: {"items"=>[{"price"=>"0", "quantity"=>"2"}, {"price"=>"-5", "quantity"=>"1"}, {"price"=>nil, "quantity"=>"0"}]}
+Order total calculation requested at 2025-08-28 13:32:45 UTC
+Invalid order calculation attempted: all items invalid - [{:price=>"0", :quantity=>"2"}, {:price=>"-5", :quantity=>"1"}, {:price=>nil, :quantity=>"0"}]
+Completed 400 Bad Request in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms | Allocations: 211)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------------------------
+Api::OrderProcessorControllerTest: test_calculate_total_with_valid_items_returns_success
+----------------------------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+Started POST "/api/order_processor/calculate_total" for 127.0.0.1 at 2025-08-28 19:02:45 +0530
+Processing by Api::OrderProcessorController#calculate_total as HTML
+  Parameters: {"items"=>[{"price"=>"10.5", "quantity"=>"2"}, {"price"=>"5.25", "quantity"=>"3"}]}
+Order total calculation requested at 2025-08-28 13:32:45 UTC
+Order total calculated successfully: 36.75 for 2 items
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms | Allocations: 200)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+----------------------------------------------------------------------------------------
+Api::OrderProcessorControllerTest: test_calculate_total_with_invalid_items_returns_error
+----------------------------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+Started POST "/api/order_processor/calculate_total" for 127.0.0.1 at 2025-08-28 19:02:45 +0530
+Processing by Api::OrderProcessorController#calculate_total as HTML
+  Parameters: {"items"=>[{"price"=>"0", "quantity"=>"2"}]}
+Order total calculation requested at 2025-08-28 13:32:45 UTC
+Invalid order calculation attempted: all items invalid - [{:price=>"0", :quantity=>"2"}]
+Completed 400 Bad Request in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms | Allocations: 145)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+-------------------------------------------------------------------------------------
+Api::OrderProcessorControllerTest: test_calculate_total_with_empty_items_returns_zero
+-------------------------------------------------------------------------------------
+[dotenv] Saved a snapshot of [32mENV[0m
+Started POST "/api/order_processor/calculate_total" for 127.0.0.1 at 2025-08-28 19:02:45 +0530
+Processing by Api::OrderProcessorController#calculate_total as HTML
+  Parameters: {"items"=>[""]}
+Order total calculation requested at 2025-08-28 13:32:45 UTC
+Order total calculated successfully: 0 for 0 items
+Completed 200 OK in 0ms (Views: 0.0ms | ActiveRecord: 0.0ms | Allocations: 114)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m

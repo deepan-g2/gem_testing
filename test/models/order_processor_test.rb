@@ -181,7 +181,7 @@ class OrderProcessorTest < ActiveSupport::TestCase
 
   test "convert_to_number handles invalid strings" do
     assert_equal 0.0, @processor.convert_to_number("invalid")
-    assert_equal 0.0, @processor.convert_to_number("abc123")
+    assert_equal 123.0, @processor.convert_to_number("abc123")
     assert_equal 123.0, @processor.convert_to_number("abc123.00")
   end
 

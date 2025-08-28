@@ -51,7 +51,12 @@ class OrderProcessor
   def convert_to_number(value)
     # Always return a numeric value, never nil
     return 0.0 if value.nil?
-    return value.to_f if value.is_a?(Numeric)
+    
+    if value.is_a?(Numeric)
+      # Handle infinity and NaN cases
+      return 0.0 unless value.finite?
+      return value.to_f
+    end
     
     if value.is_a?(String)
       cleaned_value = value.strip

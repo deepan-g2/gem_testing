@@ -9,6 +9,8 @@ class Api::OrderProcessorController < ApplicationController
       items = params[:items] || []
 
       # Convert Rails parameters to regular hashes with input validation
+      # Filter out empty strings and non-hash items that Rails might create
+      items = items.select { |item| item.is_a?(Hash) || item.is_a?(ActionController::Parameters) }
       items = items.map { |item| item.to_unsafe_h.symbolize_keys } if items.any?
 
       processor = OrderProcessor.new

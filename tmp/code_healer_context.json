@@ -1,0 +1,330 @@
+[
+  {
+    "file": ".DS_Store",
+    "size": 6148
+  },
+  {
+    "file": ".dockerignore",
+    "size": 703
+  },
+  {
+    "file": ".gitignore",
+    "size": 44
+  },
+  {
+    "file": ".idea/.gitignore",
+    "size": 224
+  },
+  {
+    "file": ".idea/gem_testing.iml",
+    "size": 3395
+  },
+  {
+    "file": ".idea/misc.xml",
+    "size": 189
+  },
+  {
+    "file": ".idea/modules.xml",
+    "size": 274
+  },
+  {
+    "file": ".idea/vcs.xml",
+    "size": 167
+  },
+  {
+    "file": ".ruby-version",
+    "size": 11
+  },
+  {
+    "file": "Dockerfile",
+    "size": 1870
+  },
+  {
+    "file": "Gemfile",
+    "size": 2286
+  },
+  {
+    "file": "Gemfile.lock",
+    "size": 8367
+  },
+  {
+    "file": "README.md",
+    "size": 374
+  },
+  {
+    "file": "Rakefile",
+    "size": 227
+  },
+  {
+    "file": "app/assets/config/manifest.js",
+    "size": 143
+  },
+  {
+    "file": "app/assets/images/.keep",
+    "size": 0
+  },
+  {
+    "file": "app/assets/stylesheets/application.css",
+    "size": 721
+  },
+  {
+    "file": "app/channels/application_cable/channel.rb",
+    "size": 79
+  },
+  {
+    "file": "app/channels/application_cable/connection.rb",
+    "size": 85
+  },
+  {
+    "file": "app/controllers/api/order_processor_controller.rb",
+    "size": 2783
+  },
+  {
+    "file": "app/controllers/application_controller.rb",
+    "size": 57
+  },
+  {
+    "file": "app/controllers/concerns/.keep",
+    "size": 0
+  },
+  {
+    "file": "app/helpers/application_helper.rb",
+    "size": 29
+  },
+  {
+    "file": "app/javascript/application.js",
+    "size": 157
+  },
+  {
+    "file": "app/javascript/controllers/application.js",
+    "size": 218
+  },
+  {
+    "file": "app/javascript/controllers/hello_controller.js",
+    "size": 157
+  },
+  {
+    "file": "app/javascript/controllers/index.js",
+    "size": 272
+  },
+  {
+    "file": "app/jobs/application_job.rb",
+    "size": 269
+  },
+  {
+    "file": "app/mailers/application_mailer.rb",
+    "size": 102
+  },
+  {
+    "file": "app/models/application_record.rb",
+    "size": 74
+  },
+  {
+    "file": "app/models/concerns/.keep",
+    "size": 0
+  },
+  {
+    "file": "app/models/order_processor.rb",
+    "size": 2433
+  },
+  {
+    "file": "app/views/layouts/application.html.erb",
+    "size": 352
+  },
+  {
+    "file": "app/views/layouts/mailer.html.erb",
+    "size": 227
+  },
+  {
+    "file": "app/views/layouts/mailer.text.erb",
+    "size": 13
+  },
+  {
+    "file": "bin/bundle",
+    "size": 2801
+  },
+  {
+    "file": "bin/docker-entrypoint",
+    "size": 191
+  },
+  {
+    "file": "bin/importmap",
+    "size": 91
+  },
+  {
+    "file": "bin/rails",
+    "size": 141
+  },
+  {
+    "file": "bin/rake",
+    "size": 90
+  },
+  {
+    "file": "bin/setup",
+    "size": 984
+  },
+  {
+    "file": "config/application.rb",
+    "size": 994
+  },
+  {
+    "file": "config/boot.rb",
+    "size": 207
+  },
+  {
+    "file": "config/cable.yml",
+    "size": 192
+  },
+  {
+    "file": "config/code_healer.yml",
+    "size": 2258
+  },
+  {
+    "file": "config/credentials.yml.enc",
+    "size": 456
+  },
+  {
+    "file": "config/database.yml",
+    "size": 635
+  },
+  {
+    "file": "config/environment.rb",
+    "size": 128
+  },
+  {
+    "file": "config/environments/development.rb",
+    "size": 2672
+  },
+  {
+    "file": "config/environments/production.rb",
+    "size": 4296
+  },
+  {
+    "file": "config/environments/test.rb",
+    "size": 2643
+  },
+  {
+    "file": "config/importmap.rb",
+    "size": 285
+  },
+  {
+    "file": "config/initializers/assets.rb",
+    "size": 502
+  },
+  {
+    "file": "config/initializers/content_security_policy.rb",
+    "size": 1071
+  },
+  {
+    "file": "config/initializers/filter_parameter_logging.rb",
+    "size": 448
+  },
+  {
+    "file": "config/initializers/inflections.rb",
+    "size": 649
+  },
+  {
+    "file": "config/initializers/permissions_policy.rb",
+    "size": 480
+  },
+  {
+    "file": "config/locales/en.yml",
+    "size": 908
+  },
+  {
+    "file": "config/master.key",
+    "size": 32
+  },
+  {
+    "file": "config/puma.rb",
+    "size": 1939
+  },
+  {
+    "file": "config/routes.rb",
+    "size": 759
+  },
+  {
+    "file": "config/sidekiq.yml",
+    "size": 188
+  },
+  {
+    "file": "config/storage.yml",
+    "size": 1152
+  },
+  {
+    "file": "config.ru",
+    "size": 160
+  },
+  {
+    "file": "db/seeds.rb",
+    "size": 494
+  },
+  {
+    "file": "docs/business_rules.md",
+    "size": 581
+  },
+  {
+    "file": "lib/assets/.keep",
+    "size": 0
+  },
+  {
+    "file": "lib/tasks/.keep",
+    "size": 0
+  },
+  {
+    "file": "test/application_system_test_case.rb",
+    "size": 157
+  },
+  {
+    "file": "test/channels/application_cable/connection_test.rb",
+    "size": 276
+  },
+  {
+    "file": "test/controllers/.keep",
+    "size": 0
+  },
+  {
+    "file": "test/controllers/api/order_processor_controller_test.rb",
+    "size": 3072
+  },
+  {
+    "file": "test/fixtures/files/.keep",
+    "size": 0
+  },
+  {
+    "file": "test/helpers/.keep",
+    "size": 0
+  },
+  {
+    "file": "test/integration/.keep",
+    "size": 0
+  },
+  {
+    "file": "test/mailers/.keep",
+    "size": 0
+  },
+  {
+    "file": "test/models/.keep",
+    "size": 0
+  },
+  {
+    "file": "test/models/order_processor_test.rb",
+    "size": 7088
+  },
+  {
+    "file": "test/system/.keep",
+    "size": 0
+  },
+  {
+    "file": "test/test_helper.rb",
+    "size": 410
+  },
+  {
+    "file": "test_fix.rb",
+    "size": 726
+  },
+  {
+    "file": "verify_fix.rb",
+    "size": 4085
+  }
+]
