@@ -21,12 +21,20 @@ class Api::OrderProcessorController < ApplicationController
 
     result = processor.calculate_total(items)
 
-    render json: {
-      success: true,
-      total: result,
-      items: items,
-      message: "Total calculated successfully"
-    }
+    if result == 999
+      render json: {
+        success: false,
+        error: "Order calculation error",
+        message: "Unable to calculate total due to invalid data"
+      }, status: :bad_request
+    else
+      render json: {
+        success: true,
+        total: result,
+        items: items,
+        message: "Total calculated successfully"
+      }
+    end
   end
 
   private

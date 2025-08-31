@@ -94,4 +94,28 @@ class Api::OrderProcessorControllerTest < ActionDispatch::IntegrationTest
     expected_total = (10.50 * 2) + (5.25 * 3)
     assert_equal expected_total, json_response['total']
   end
+
+  test "calculate_total returns error when model returns 999" do
+    post '/api/order_processor/calculate_total', params: {
+      items: [
+        { price: 10.50, quantity: 2 },
+        nil
+      ]
+    }
+
+    assert_response :bad_request
+    json_response = JSON.parse(response.body)
+    refute json_response['success']
+    assert_equal "Order calculation error", json_response['error']
+    assert_equal "Unable to calculate total due to invalid data", json_response['message']
+  end
+
+  test "calculate_total handles nil params gracefully" do
+    post '/api/order_processor/calculate_total', params: { items: nil }
+
+    assert_response :bad_request
+    json_response = JSON.parse(response.body)
+    refute json_response['success']
+    assert_equal "Order calculation error", json_response['error']
+  end
 end
