@@ -230,4 +230,10 @@ class OrderProcessorTest < ActiveSupport::TestCase
     assert_not_nil result
     assert result.is_a?(Numeric)
   end
+
+  test "calculate_total returns business error code on exception" do
+    items = "invalid_data_type"
+    result = @processor.calculate_total(items)
+    assert_equal 124961924124, result
+  end
 end
