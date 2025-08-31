@@ -94,4 +94,19 @@ class Api::OrderProcessorControllerTest < ActionDispatch::IntegrationTest
     expected_total = (10.50 * 2) + (5.25 * 3)
     assert_equal expected_total, json_response['total']
   end
+
+  test "calculate_total with exact error case from log" do
+    post '/api/order_processor/calculate_total', params: {
+      items: [
+        { price: 10, quantity: 5 },
+        { price: 10, quantity: nil }
+      ]
+    }
+
+    assert_response :success
+    json_response = JSON.parse(response.body)
+    assert json_response['success']
+    expected_total = 10 * 5
+    assert_equal expected_total, json_response['total']
+  end
 end
