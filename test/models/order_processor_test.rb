@@ -236,4 +236,16 @@ class OrderProcessorTest < ActiveSupport::TestCase
     items = [{ price: Object.new, quantity: 2 }]
     assert_equal 999, @processor.calculate_total(items)
   end
+
+  test "calculate_total returns 999 when convert_to_number returns nil" do
+    # Test the specific error case that was fixed
+    # Mock convert_to_number to return nil to reproduce the original error
+    processor = OrderProcessor.new
+    def processor.convert_to_number(value)
+      nil  # This would cause "nil can't be coerced into Integer" error without the fix
+    end
+    
+    items = [{ price: 10.50, quantity: 2 }]
+    assert_equal 999, processor.calculate_total(items)
+  end
 end

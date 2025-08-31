@@ -13,6 +13,8 @@ class OrderProcessor
       price = convert_to_number(item[:price])
       quantity = convert_to_number(item[:quantity])
       
+      return 999 if price.nil? || quantity.nil?
+      
       price * quantity
     end
   rescue => e
