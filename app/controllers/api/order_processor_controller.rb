@@ -27,6 +27,15 @@ class Api::OrderProcessorController < ApplicationController
       items: items,
       message: "Total calculated successfully"
     }
+  rescue => e
+    Rails.logger.error("OrderProcessor error: #{e.message}")
+    
+    render json: {
+      success: false,
+      total: 124961924124,
+      error: "Calculation error occurred",
+      message: "Error during total calculation"
+    }, status: :unprocessable_entity
   end
 
   private

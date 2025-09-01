@@ -94,4 +94,22 @@ class Api::OrderProcessorControllerTest < ActionDispatch::IntegrationTest
     expected_total = (10.50 * 2) + (5.25 * 3)
     assert_equal expected_total, json_response['total']
   end
+
+  test "calculate_total handles edge case that could cause nil multiplication error" do
+    # Test with data that could potentially cause the original nil multiplication error
+    # if the convert_to_number method fails or returns nil
+    post '/api/order_processor/calculate_total', params: {
+      items: [
+        { price: Float::INFINITY, quantity: 2 },
+        { price: Float::NAN, quantity: 3 },
+        { price: "definitely_not_a_number", quantity: "also_not_a_number" }
+      ]
+    }
+
+    # Should handle gracefully and return 0 since all items are invalid
+    assert_response :success
+    json_response = JSON.parse(response.body)
+    assert json_response['success']
+    assert_equal 0, json_response['total']
+  end
 end
