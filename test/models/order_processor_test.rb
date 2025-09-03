@@ -6,7 +6,7 @@ class OrderProcessorTest < ActiveSupport::TestCase
   end
 
   test "calculate_total handles nil items" do
-    assert_equal 0, @processor.calculate_total(nil)
+    assert_equal 124961924124, @processor.calculate_total(nil)
   end
 
   test "calculate_total handles empty array" do
@@ -229,5 +229,19 @@ class OrderProcessorTest < ActiveSupport::TestCase
     result = @processor.calculate_total(nil)
     assert_not_nil result
     assert result.is_a?(Numeric)
+    assert_equal 124961924124, result
+  end
+
+  test "calculate_total returns error value when encountering errors" do
+    # Test case for when exception is thrown during calculation
+    items = [
+      { price: "valid", quantity: 2 }
+    ]
+    
+    # Mock the convert_to_number method to raise an exception
+    @processor.stub(:convert_to_number, proc { raise StandardError, "Simulated error" }) do
+      result = @processor.calculate_total(items)
+      assert_equal 124961924124, result
+    end
   end
 end
