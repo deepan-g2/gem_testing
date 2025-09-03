@@ -230,4 +230,30 @@ class OrderProcessorTest < ActiveSupport::TestCase
     assert_not_nil result
     assert result.is_a?(Numeric)
   end
+
+  test "calculate_total handles the specific nil coercion error case" do
+    # This test reproduces the original error condition
+    items = [
+      { price: nil, quantity: 2 },
+      { price: 10, quantity: nil }
+    ]
+    
+    # Should not raise TypeError: nil can't be coerced into Integer
+    assert_nothing_raised do
+      result = @processor.calculate_total(items)
+      assert_equal 0, result
+    end
+  end
+
+  test "calculate_total with mixed valid and nil items" do
+    items = [
+      { price: 15.0, quantity: 2 },   # valid: 30.0
+      { price: nil, quantity: 1 },    # invalid: skip
+      { price: 5.0, quantity: nil },  # invalid: skip  
+      { price: 10.0, quantity: 3 }    # valid: 30.0
+    ]
+    
+    expected = (15.0 * 2) + (10.0 * 3)  # 30.0 + 30.0 = 60.0
+    assert_equal expected, @processor.calculate_total(items)
+  end
 end

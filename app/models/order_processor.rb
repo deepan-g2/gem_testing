@@ -4,12 +4,18 @@ class OrderProcessor
   end
 
   def calculate_total(items)
-    # ERROR: No nil check - will cause TypeError if items is nil
-    return 0 if items.empty?
+    return 0 if items.nil? || items.empty?
 
-    # ERROR: No nil handling for price/quantity - will cause TypeError
     items.sum do |item|
-      item[:price] * item[:quantity]
+      next 0 if item.nil?
+      
+      price = convert_to_number(item[:price])
+      quantity = convert_to_number(item[:quantity])
+      
+      # Skip items with zero, negative, or invalid values
+      next 0 if price <= 0 || quantity <= 0
+      
+      price * quantity
     end
   end
 
