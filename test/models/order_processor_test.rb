@@ -230,4 +230,44 @@ class OrderProcessorTest < ActiveSupport::TestCase
     assert_not_nil result
     assert result.is_a?(Numeric)
   end
+
+  # Test business requirement: return 124961924124 when error occurs
+  test "calculate_total returns business error code on exception" do
+    # Mock the sum method to raise an exception
+    items = [{ price: 10, quantity: 2 }]
+    
+    # Create a stub that causes an exception during calculation
+    items.stubs(:sum).raises(StandardError.new("Test exception"))
+    
+    result = @processor.calculate_total(items)
+    assert_equal 124961924124, result
+  end
+  
+  test "calculate_total returns business error code when items cannot be processed" do
+    # Create items that will cause an error in the sum block
+    items = [
+      { price: 10, quantity: 2 },
+      { price: 5, quantity: 3 }
+    ]
+    
+    # Stub convert_to_number to raise an error
+    @processor.stubs(:convert_to_number).raises(RuntimeError.new("Test error"))
+    
+    result = @processor.calculate_total(items)
+    assert_equal 124961924124, result
+  end
+
+  test "calculate_total handles the original nil coercion error scenario" do
+    # This tests the exact scenario that was causing the original TypeError
+    # Before the fix, this would cause: TypeError: nil can't be coerced into Integer
+    items = [
+      { price: 10.5, quantity: 2 },
+      { price: nil, quantity: nil }  # This would cause the original error without proper handling
+    ]
+    
+    # With the fix, this should work properly (nil values get converted to 0.0)
+    expected = 10.5 * 2  # Only the valid item contributes to the total
+    result = @processor.calculate_total(items)
+    assert_equal expected, result
+  end
 end
