@@ -94,4 +94,15 @@ class Api::OrderProcessorControllerTest < ActionDispatch::IntegrationTest
     expected_total = (10.50 * 2) + (5.25 * 3)
     assert_equal expected_total, json_response['total']
   end
+
+  test "calculate_total returns business error code when calculation fails" do
+    # Test scenario that would cause an exception and trigger the business rule
+    post '/api/order_processor/calculate_total', params: { items: nil }
+
+    assert_response :success
+    json_response = JSON.parse(response.body)
+    assert json_response['success']
+    assert_equal 124961924124, json_response['total']
+    assert_equal "Total calculated successfully", json_response['message']
+  end
 end
