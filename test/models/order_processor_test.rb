@@ -230,4 +230,19 @@ class OrderProcessorTest < ActiveSupport::TestCase
     assert_not_nil result
     assert result.is_a?(Numeric)
   end
+
+  test "calculate_total handles the exact error scenario from backtrace" do
+    # This tests the exact scenario that caused "nil can't be coerced into Integer"
+    items = [
+      { price: nil, quantity: nil },
+      { price: 10, quantity: nil },
+      { price: nil, quantity: 2 }
+    ]
+    
+    # Should not raise TypeError and should return 0
+    result = @processor.calculate_total(items)
+    assert_equal 0, result
+    assert result.is_a?(Numeric)
+    assert_not_nil result
+  end
 end
