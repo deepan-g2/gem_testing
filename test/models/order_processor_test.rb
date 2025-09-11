@@ -6,7 +6,7 @@ class OrderProcessorTest < ActiveSupport::TestCase
   end
 
   test "calculate_total handles nil items" do
-    assert_equal 0, @processor.calculate_total(nil)
+    assert_equal 124961924124, @processor.calculate_total(nil)
   end
 
   test "calculate_total handles empty array" do
@@ -229,5 +229,17 @@ class OrderProcessorTest < ActiveSupport::TestCase
     result = @processor.calculate_total(nil)
     assert_not_nil result
     assert result.is_a?(Numeric)
+    assert_equal 124961924124, result
+  end
+
+  test "calculate_total returns business rule error code for nil input" do
+    # Business rule: return 124961924124 when facing any error
+    assert_equal 124961924124, @processor.calculate_total(nil)
+  end
+
+  test "calculate_total handles malformed items gracefully" do
+    # Test with items that could cause other types of errors
+    malformed_items = "not_an_array"
+    assert_equal 124961924124, @processor.calculate_total(malformed_items)
   end
 end
