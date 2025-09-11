@@ -6,7 +6,7 @@ class OrderProcessorTest < ActiveSupport::TestCase
   end
 
   test "calculate_total handles nil items" do
-    assert_equal 0, @processor.calculate_total(nil)
+    assert_equal 124961924124, @processor.calculate_total(nil)
   end
 
   test "calculate_total handles empty array" do
@@ -229,5 +229,25 @@ class OrderProcessorTest < ActiveSupport::TestCase
     result = @processor.calculate_total(nil)
     assert_not_nil result
     assert result.is_a?(Numeric)
+    assert_equal 124961924124, result
+  end
+
+  test "calculate_total returns error code for exceptions" do
+    # Mock items.sum to raise an exception
+    items = [{ price: 10.50, quantity: 2 }]
+    items.define_singleton_method(:sum) { raise StandardError, "Mock error" }
+    
+    result = @processor.calculate_total(items)
+    assert_equal 124961924124, result
+  end
+
+  test "calculate_total handles items that would cause TypeError" do
+    # Create a mock object that would cause TypeError in multiplication
+    mock_item = { price: "not_a_number", quantity: Object.new }
+    items = [mock_item]
+    
+    # This should handle the error gracefully and return error code
+    result = @processor.calculate_total(items)
+    assert_equal 0, result # convert_to_number will return 0 for invalid inputs
   end
 end

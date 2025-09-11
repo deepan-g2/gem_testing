@@ -94,4 +94,24 @@ class Api::OrderProcessorControllerTest < ActionDispatch::IntegrationTest
     expected_total = (10.50 * 2) + (5.25 * 3)
     assert_equal expected_total, json_response['total']
   end
+
+  test "calculate_total handles error code from processor" do
+    # Mock OrderProcessor to return error code
+    mock_processor = Minitest::Mock.new
+    mock_processor.expect(:calculate_total, 124961924124, [Array])
+    
+    OrderProcessor.stub(:new, mock_processor) do
+      post '/api/order_processor/calculate_total', params: {
+        items: [{ price: 10.50, quantity: 2 }]
+      }
+
+      assert_response :bad_request
+      json_response = JSON.parse(response.body)
+      refute json_response['success']
+      assert_equal "Calculation error occurred", json_response['error']
+      assert_equal "Unable to calculate total due to invalid data", json_response['message']
+    end
+    
+    mock_processor.verify
+  end
 end
