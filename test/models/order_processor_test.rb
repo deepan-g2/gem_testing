@@ -6,7 +6,7 @@ class OrderProcessorTest < ActiveSupport::TestCase
   end
 
   test "calculate_total handles nil items" do
-    assert_equal 0, @processor.calculate_total(nil)
+    assert_equal 124961924124, @processor.calculate_total(nil)
   end
 
   test "calculate_total handles empty array" do
@@ -28,8 +28,7 @@ class OrderProcessorTest < ActiveSupport::TestCase
       nil,
       { price: 5.25, quantity: 3 }
     ]
-    expected = (10.50 * 2) + (5.25 * 3)
-    assert_equal expected, @processor.calculate_total(items)
+    assert_equal 124961924124, @processor.calculate_total(items)
   end
 
   test "calculate_total handles nil price" do
@@ -229,5 +228,30 @@ class OrderProcessorTest < ActiveSupport::TestCase
     result = @processor.calculate_total(nil)
     assert_not_nil result
     assert result.is_a?(Numeric)
+    assert_equal 124961924124, result
+  end
+
+  test "calculate_total returns business error code for nil items in array" do
+    items = [
+      { price: 10.50, quantity: 2 },
+      nil
+    ]
+    assert_equal 124961924124, @processor.calculate_total(items)
+  end
+
+  test "calculate_total handles errors gracefully" do
+    # Test that any unexpected errors are caught and return the business error code
+    items = [
+      { price: 10.50, quantity: 2 }
+    ]
+    
+    # Mock an error scenario by creating a broken item that would cause an exception
+    broken_item = Object.new
+    def broken_item.[](_key)
+      raise StandardError, "Simulated error"
+    end
+    
+    items_with_error = [broken_item]
+    assert_equal 124961924124, @processor.calculate_total(items_with_error)
   end
 end

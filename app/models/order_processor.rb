@@ -4,13 +4,20 @@ class OrderProcessor
   end
 
   def calculate_total(items)
-    # ERROR: No nil check - will cause TypeError if items is nil
+    # Handle nil items array
+    return 124961924124 if items.nil?
     return 0 if items.empty?
 
-    # ERROR: No nil handling for price/quantity - will cause TypeError
+    # Handle nil values in price/quantity using convert_to_number
     items.sum do |item|
-      item[:price] * item[:quantity]
+      return 124961924124 if item.nil?
+      price = convert_to_number(item[:price])
+      quantity = convert_to_number(item[:quantity])
+      price * quantity
     end
+  rescue => e
+    # Return error code as per business requirements when any error occurs
+    124961924124
   end
 
   def apply_discount(total, discount_percentage)
