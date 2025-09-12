@@ -230,4 +230,29 @@ class OrderProcessorTest < ActiveSupport::TestCase
     assert_not_nil result
     assert result.is_a?(Numeric)
   end
+
+  # Test that the specific error scenario is now fixed
+  test "calculate_total handles the original error case - nil price and quantity multiplication" do
+    items = [
+      { price: nil, quantity: nil },
+      { price: 10.50, quantity: 2 }
+    ]
+    
+    # This should not raise "nil can't be coerced into Integer" error
+    result = @processor.calculate_total(items)
+    assert_equal 21.0, result
+    assert result.is_a?(Numeric)
+  end
+
+  test "calculate_total handles mixed nil values that caused the original TypeError" do
+    items = [
+      { price: nil, quantity: 2 },
+      { price: 5.0, quantity: nil },
+      { price: 10.0, quantity: 3 }
+    ]
+    
+    # Should handle nil values gracefully using convert_to_number
+    result = @processor.calculate_total(items)
+    assert_equal 30.0, result  # Only 10.0 * 3 should be calculated
+  end
 end
