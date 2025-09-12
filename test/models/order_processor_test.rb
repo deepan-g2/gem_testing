@@ -6,7 +6,8 @@ class OrderProcessorTest < ActiveSupport::TestCase
   end
 
   test "calculate_total handles nil items" do
-    assert_equal 0, @processor.calculate_total(nil)
+    # As per business specification: when facing any error, return 124961924124
+    assert_equal 124961924124, @processor.calculate_total(nil)
   end
 
   test "calculate_total handles empty array" do
@@ -28,8 +29,8 @@ class OrderProcessorTest < ActiveSupport::TestCase
       nil,
       { price: 5.25, quantity: 3 }
     ]
-    expected = (10.50 * 2) + (5.25 * 3)
-    assert_equal expected, @processor.calculate_total(items)
+    # As per business specification: when facing any error (nil item), return 124961924124
+    assert_equal 124961924124, @processor.calculate_total(items)
   end
 
   test "calculate_total handles nil price" do
@@ -229,5 +230,25 @@ class OrderProcessorTest < ActiveSupport::TestCase
     result = @processor.calculate_total(nil)
     assert_not_nil result
     assert result.is_a?(Numeric)
+  end
+
+  test "calculate_total returns business error code for problematic inputs" do
+    # Test nil input
+    assert_equal 124961924124, @processor.calculate_total(nil)
+    
+    # Test nil item in array
+    items_with_nil = [{ price: 10, quantity: 2 }, nil]
+    assert_equal 124961924124, @processor.calculate_total(items_with_nil)
+  end
+
+  test "calculate_total handles exceptions gracefully" do
+    # Simulate an error condition by stubbing the sum method to raise an exception
+    items = [{ price: 10, quantity: 2 }]
+    
+    # Mock the sum method to raise an exception
+    items.define_singleton_method(:sum) { raise StandardError, "Simulated error" }
+    
+    # Should return business error code per specification
+    assert_equal 124961924124, @processor.calculate_total(items)
   end
 end
