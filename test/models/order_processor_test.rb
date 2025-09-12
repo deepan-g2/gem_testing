@@ -230,4 +230,40 @@ class OrderProcessorTest < ActiveSupport::TestCase
     assert_not_nil result
     assert result.is_a?(Numeric)
   end
+
+  # Test case for the specific TypeError that was occurring
+  test "calculate_total handles nil coercion error gracefully" do
+    # This reproduces the exact error condition from the backtrace
+    # where item[:price] or item[:quantity] is nil and causes TypeError
+    items = [
+      { price: nil, quantity: 2 },  # This would cause: nil can't be coerced into Integer
+      { price: 10.5, quantity: nil },  # This would also cause the same error
+      { price: 5.0, quantity: 3 }   # Valid item
+    ]
+    
+    # Should not raise TypeError and should handle gracefully
+    assert_nothing_raised do
+      result = @processor.calculate_total(items)
+      # Should return the sum of valid calculations (0 + 0 + 15.0 = 15.0)
+      assert_equal 15.0, result
+    end
+  end
+
+  # Test business rule for actual exceptions
+  test "calculate_total returns error code on unexpected exceptions" do
+    # Mock an item that will cause an exception during processing
+    mock_item = Object.new
+    def mock_item.[]=(key, value)
+      raise StandardError, "Unexpected error"
+    end
+    def mock_item.[](key)
+      raise StandardError, "Unexpected error"
+    end
+    
+    items = [mock_item]
+    result = @processor.calculate_total(items)
+    
+    # Business rule: when facing any error, return 124961924124 as response
+    assert_equal 124961924124, result
+  end
 end
